@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:carrot"
+		},
+		"components": {
+			"minecraft:seed": {
+				"crop_result": "exdrill:carrots_crop",
+				"plant_at": [
+					"minecraft:farmland",
+					"exdrill:planter_box"
+				]
+			},
+			"minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "normal"
+			},
+			"minecraft:use_duration": 32
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "exdrill:beetroot_buddy",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/beetroot_buddy"
+			},
+			"geometry": {
+				"default": "geometry.beetroot_buddy"
+			},
+			"animations": {
+				"move": "animation.beetroot_buddy.walk",
+				"pop_up": "animation.beetroot_buddy.pop_up",
+				"sit": "animation.beetroot_buddy.sit"
+			},
+			"scripts": {
+				"animate": [
+					"move",
+					"pop_up",
+					{
+						"sit": "query.is_sitting"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#6b1344",
+				"overlay_color": "#520739"
+			}
+		}
+	}
+}

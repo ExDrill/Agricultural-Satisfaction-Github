@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "exdrill:butterfly",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"blue_morpho": "textures/entity/butterfly/blue_morpho",
+				"swallowtail": "textures/entity/butterfly/swallowtail",
+				"monarch": "textures/entity/butterfly/monarch",
+				"red_admiral": "textures/entity/butterfly/red_admiral",
+				"reji": "textures/entity/butterfly/reji"
+			},
+			"geometry": {
+				"default": "geometry.butterfly"
+			},
+			"animations": {
+				"fly": "animation.butterfly.fly"
+			},
+			"scripts": {
+				"animate": [
+					"fly"
+				]
+			},
+			"render_controllers": [
+				"controller.render.butterfly"
+			],
+			"spawn_egg": {
+				"base_color": "#35a199",
+				"overlay_color": "#021413"
+			}
+		}
+	}
+}

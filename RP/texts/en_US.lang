@@ -1,0 +1,25 @@
+
+##Items
+item.exdrill:tomato=Tomato
+item.exdrill:tomato_seeds=Tomato Seeds
+item.exdrill:tomato_soup=Tomato Soup
+item.exdrill:farmer_hat=Farmer's Hat
+item.exdrill:bottled_butterfly=Bottled Butterfly
+item.exdrill:bottled_worm=Bottled Worm
+item.exdrill:suspicious_brew=Suspicious Brew
+
+##Blocks
+tile.exdrill:rich_soil.name=Rich Soil
+tile.exdrill:planter_box.name=Planter Box
+entity.exdrill:beetroot_buddy.name=Beetroot Buddy
+
+##Entities
+entity.exdrill:butterfly.name=Butterfly
+entity.exdrill:worm.name=Worm
+
+##Spawn Eggs
+item.spawn_egg.entity.exdrill:butterfly.name=Spawn Butterfly
+item.spawn_egg.entity.exdrill:worm.name=Spawn Worm
+item.spawn_egg.entity.exdrill:beetroot_buddy.name=Spawn Beetroot Buddy
+
+##Misc

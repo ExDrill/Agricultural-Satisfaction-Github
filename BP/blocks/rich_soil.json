@@ -1,0 +1,15 @@
+{
+	"format_version": "1.17.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "exdrill:rich_soil"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.natureBuildingBlocks"
+			}
+		}
+	}
+}

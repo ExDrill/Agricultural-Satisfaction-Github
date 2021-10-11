@@ -1,0 +1,37 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Agricultural Satisfaction BP",
+		"description": "Created by ExDrill",
+		"min_engine_version": [
+			1,
+			13,
+			0
+		],
+		"uuid": "2b38ae49-b42a-4104-a655-14e577ae89ef",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "c765515c-44b1-44d5-a99f-45eaa95c8a40",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"2.1.5",
+				"2.1.1"
+			]
+		}
+	}
+}

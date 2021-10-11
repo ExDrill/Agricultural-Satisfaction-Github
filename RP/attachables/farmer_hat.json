@@ -1,0 +1,28 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "exdrill:farmer_hat",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/models/armor/farmer_hat"
+            },
+            "geometry": {
+                "default": "geometry.farmer_hat"
+            },
+            "animations": {
+                "scale_up": "animation.farmer_hat.scale"
+            },
+            "scripts": {
+                "animate": [
+                    "scale_up"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

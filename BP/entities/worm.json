@@ -1,0 +1,209 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "exdrill:worm",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"animations": {
+				"digging": "animation.worm_digging"
+			},
+			"scripts": {
+				"animate": [
+					{"digging": "query.variant == 1"}
+				]
+			}
+		},
+		"component_groups": {
+			"instant_despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"move_to_block": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 5,
+					"time_down_event": {
+						"event": "try_to_dig",
+						"target":"self"
+					}
+				},
+				"minecraft:knockback_resistance": {
+					"value": 0
+				},
+				"minecraft:movement.generic": {},
+				"minecraft:navigation.generic": {},
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:pushable": {}
+			},
+			"digging": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 5,
+					"time_down_event": {
+						"event": "stop_digging",
+						"target": "self"
+					}
+				},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},
+			"minecraft:movement": {
+				"value": 0.15
+			},
+			"minecraft:physics": {},
+			"minecraft:breathable": {
+				"total_supply": 20,
+				"suffocate_time": 15
+			},
+			"minecraft:interact": {
+				"interactions": {
+					"on_interact": {
+						"event": "exdrill:instant_despawn",
+						"target": "self",
+						"filters": {
+							"test": "has_equipment",
+							"subject": "other",
+							"domain": "hand",
+							"value": "minecraft:glass_bottle"
+						}
+					},
+					"transform_to_item": "exdrill:bottled_worm"
+				}
+			},
+			"minecraft:leashable": {},
+			"minecraft:nameable": {},
+			"minecraft:balloonable": {},
+			"minecraft:type_family": {
+				"family": [
+					"mob",
+					"worm",
+					"arthropod"
+				]
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 1
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 3
+			},
+			"minecraft:jump.static": {
+				"jump_power": 0.55
+			},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.float": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"move_to_block"
+					]
+				}
+			},
+			"exdrill:spawn": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"move_to_block"
+							]
+						},
+						"filters": {
+							"test": "in_water_or_rain",
+							"subject": "self",
+							"value": true
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"instant_despawn"
+							]
+						},
+						"filters": {
+							"test": "in_water_or_rain",
+							"subject": "self",
+							"operator": "not",
+							"value": true
+						}
+					}
+				]
+			},
+			"try_to_dig": {
+				"randomize": [
+					{
+						"run_command": {
+							"command": [
+								"execute @s ~ ~ ~ detect ~ ~-1 ~ dirt 1 event entity @s start_digging"
+							]
+						},
+						"weight": 49
+					},
+					{
+						"weight": 1
+					}
+				]
+			},
+			"start_digging": {
+				"add": {
+					"component_groups": [
+						"digging"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"move_to_block"
+					]
+				}
+			},
+			"stop_digging": {
+				"remove": {
+					"component_groups": [
+						"digging"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"move_to_block"
+					]
+				},
+				"run_command": {
+					"command": [
+						"fill ~ ~-1 ~ ~ ~-1 ~ exdrill:rich_soil 0 replace dirt 1"
+					],
+					"target": "self"
+				}
+			},
+			"exdrill:spawn_from_bottle": {
+				"add": {
+					"component_groups": [
+						"move_to_block"
+					]
+				}
+			},
+			"exdrill:instant_despawn": {
+				"add": {
+					"component_groups": [
+						"instant_despawn"
+					]
+				}
+			}
+		}
+	}
+}

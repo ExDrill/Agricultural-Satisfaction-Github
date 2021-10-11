@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.butterfly": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.skins[query.variant]"],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.blue_morpho",
+						"Texture.swallowtail",
+						"Texture.monarch",
+						"Texture.red_admiral",
+						"Texture.reji"
+					]
+				}
+			}
+		}
+	}
+}

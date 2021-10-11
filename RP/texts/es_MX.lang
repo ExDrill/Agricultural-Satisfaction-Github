@@ -1,0 +1,23 @@
+
+##Items
+item.exdrill:tomato=Tomate
+item.exdrill:tomato_seeds=Semillas de tomate
+item.exdrill:tomato_soup=Sopa de tomate
+item.exdrill:farmer_hat=Gorro de granjero
+item.exdrill:bottled_butterfly=Mariposa en una botella
+item.exdrill:bottled_worm=Gusano en una botella
+item.exdrill:suspicious_brew=Botella sospechosa
+
+##Blocks
+tile.exdrill:rich_soil.name=Tierra rica
+Maceterotile.exdrill:planter_box.name=Macetero
+
+##Entities
+entity.exdrill:butterfly.name=Mariposa
+entity.exdrill:worm.name=Gusano
+entity.exdrill:beetroot_buddy.name=Betabel acompañante
+
+##Spawn Eggs
+item.spawn_egg.entity.exdrill:butterfly.name=Generador de mariposa
+item.spawn_egg.entity.exdrill:worm.name=Generador de gusano
+item.spawn_egg.entity.exdrill:beetroot_buddy.name=Generador de betabel acompañante

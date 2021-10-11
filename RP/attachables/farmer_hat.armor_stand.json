@@ -1,0 +1,32 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "exdrill:farmer_hat.armor_stand",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/models/armor/farmer_hat"
+            },
+            "geometry": {
+                "default": "geometry.farmer_hat"
+            },
+            "animations": {
+                "scale_up": "animation.farmer_hat.scale_armor_stand"
+            },
+            "scripts": {
+                "animate": [
+                    "scale_up"
+                ],
+                "parent_setup": "variable.helmet_layer_visible = 0.0;" 
+            },
+            "item": {
+                "exdrill:farmer_hat": "query.owner_identifier == 'minecraft:armor_stand'"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

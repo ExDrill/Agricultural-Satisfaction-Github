@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "exdrill:tomato_soup"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 3,
+				"item": "exdrill:tomato"
+			},
+			{
+				"count": 1,
+				"item": "minecraft:bowl"
+			}
+		],
+		"result": [
+			{
+				"count": 2,
+				"item": "exdrill:tomato_soup"
+			}
+		]
+	}
+}

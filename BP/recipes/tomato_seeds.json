@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "exdrill:tomato_seeds"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "exdrill:tomato"
+			}
+		],
+		"result": [
+			{
+				"count": 2,
+				"item": "exdrill:tomato_seeds"
+			}
+		]
+	}
+}

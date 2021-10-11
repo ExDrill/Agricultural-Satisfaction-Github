@@ -1,0 +1,45 @@
+{
+	"format_version": "1.11.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "exdrill:worm",
+			"population_control": "animal"
+		},
+		"conditions": [
+			{
+				"minecraft:biome_filter": {
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "taiga"
+						},
+						{
+							"all_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "mega"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "taiga"
+								}
+							]
+						}
+					]
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 2,
+					"event": "exdrill:spawn"
+				},
+				"minecraft:weight": {
+					"default": 10
+				},
+				"minecraft:spawns_on_surface": {}
+			}
+		]
+	}
+}

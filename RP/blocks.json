@@ -1,0 +1,29 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"exdrill:tomato_crop": {
+		"sound": "grass"
+	},
+	"exdrill:rich_soil": {
+		"textures": "rich_soil",
+		"sound": "gravel"
+	},
+	"exdrill:planter_box": {
+		"sound": "wood"
+	},
+	"exdrill:wheat_crop": {
+		"sound": "grass"
+	},
+	"exdrill:carrots_crop": {
+		"sound": "grass"
+	},
+	"exdrill:potatoes_crop": {
+		"sound": "grass"
+	},
+	"exdrill:beetroots_crop": {
+		"sound": "grass"
+	}
+}

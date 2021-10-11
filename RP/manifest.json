@@ -1,0 +1,37 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Agricultural Satisfaction RP",
+		"description": "Created by ExDrill",
+		"min_engine_version": [
+			1,
+			13,
+			0
+		],
+		"uuid": "88014483-aa95-47d3-aec9-1b8730bc4093",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "e6d25446-5474-437a-926b-9ac0cb154064",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"2.1.5",
+				"2.1.1"
+			]
+		}
+	}
+}

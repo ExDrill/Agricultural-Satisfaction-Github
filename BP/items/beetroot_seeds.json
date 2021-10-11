@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:beetroot_seeds"
+		},
+		"components": {
+			"minecraft:seed": {
+				"crop_result": "exdrill:beetroots_crop",
+				"plant_at": [
+					"minecraft:farmland",
+					"exdrill:planter_box"
+				]
+			}
+		}
+	}
+}

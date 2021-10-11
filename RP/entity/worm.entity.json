@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "exdrill:worm",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/worm"
+			},
+			"geometry": {
+				"default": "geometry.worm"
+			},
+			"animations": {
+				"move": "animation.worm.move",
+				"dig": "animation.worm.dig"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"move": "query.modified_move_speed *2"
+					},
+					{
+						"dig": "query.variant == 1"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#ff9cfd",
+				"overlay_color": "#802173"
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "exdrill:dig_particle",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/dig_particle"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 10
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 0.25,
+				"sleep_time": 0.1
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": ["math.random(-0.3,0.3)", 0, "math.random(-0.3,0.3)"],
+				"direction": ["math.random(-3, 3)", "math.random(-3, 3)", "math.random(-3, 3)"]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.5
+			},
+			"minecraft:particle_initial_speed": 1,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": ["math.random(-3,3)", 0.8, "math.random(-3,3)"],
+				"linear_drag_coefficient": 3
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.07, 0.07],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 4,
+					"texture_height": 4,
+					"uv": [0, 0],
+					"uv_size": [4, 4]
+				}
+			},
+			"minecraft:particle_appearance_lighting": {}
+		}
+	}
+}

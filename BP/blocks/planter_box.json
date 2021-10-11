@@ -1,0 +1,227 @@
+{
+	"format_version": "1.17.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "exdrill:planter_box",
+			"properties": {
+				"exdrill:direction": [
+					2,
+					3,
+					4,
+					5
+				],
+				"exdrill:top_face_adjustment": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "items"
+			},
+			"minecraft:breathability": "air",
+			"minecraft:destroy_time": 0.6,
+			"minecraft:unit_cube": {},
+			"minecraft:on_player_placing": {
+				"event": "on_placed",
+				"target": "self"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [ 0.1, 0.11 ],
+				"on_tick": {
+					"event": "adjust",
+					"target": "self"
+				}
+			},
+			"tag:exdrill:planter_box": {}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('exdrill:direction') == 2",
+				"components": {}
+			},
+			{
+				"condition": "query.block_property('exdrill:direction') == 3",
+				"components": {}
+			},
+			{
+				"condition": "query.block_property('exdrill:direction') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0, -90, 0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:direction') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0, -90, 0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_1"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_top_1"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_2"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_top_2"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_3"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_top_3"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_4"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_top_4"
+						}
+					}
+				}
+			}
+		],
+		"events": {
+			"on_placed": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 0
+						}
+					},
+					{
+						"set_block_property": {
+							"exdrill:direction": "query.cardinal_facing_2d"
+						}
+					}
+				]
+			},
+			"adjust": {
+				"sequence": [
+					// North and South
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 1
+						},
+						"condition": "query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box') && query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 2 || query.block_property('exdrill:direction') == 3"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 3
+						},
+						"condition": "query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 2 || query.block_property('exdrill:direction') == 3"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 2
+						},
+						"condition": "query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 2 || query.block_property('exdrill:direction') == 3"
+					},
+					// East and West
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 1
+						},
+						"condition": "query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box') && query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 4 || query.block_property('exdrill:direction') == 5"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 3
+						},
+						"condition": "query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 4 || query.block_property('exdrill:direction') == 5"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 2
+						},
+						"condition": "query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 4 || query.block_property('exdrill:direction') == 5"
+					}
+				]
+			}
+		}
+	}
+}

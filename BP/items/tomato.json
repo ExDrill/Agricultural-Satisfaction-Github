@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:tomato",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tomato"
+			},
+			"minecraft:food": {
+				"can_always_eat": false,
+				"nutrition": 2,
+				"saturation_modifier": "good"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.6,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.worm.move": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": ["math.cos(query.anim_time*360)*-3", 0, 0],
+					"position": [0, 0, "-2 + math.cos(query.anim_time*360)*-2"],
+					"scale": [ 0, 0, "1 + math.cos(query.anim_time*360)*-0.5" ]
+				}
+			}
+		},
+		"animation.worm.dig": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": ["35+ math.cos(query.anim_time*1440)*45", 0, 0]
+				}
+			}
+		}
+	}
+}

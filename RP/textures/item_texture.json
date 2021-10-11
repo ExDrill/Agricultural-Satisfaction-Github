@@ -1,0 +1,39 @@
+{
+	"resource_pack_name": "Project Farm",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"tomato": {
+			"textures": "textures/items/tomato"
+		},
+		"tomato_seeds": {
+			"textures": "textures/items/tomato_seeds"
+		},
+		"tomato_soup": {
+			"textures": "textures/items/tomato_soup"
+		},
+		"farmer_hat": {
+			"textures": "textures/items/farmer_hat"
+		},
+		"bottled_worm": {
+			"textures": "textures/items/bottled_worm"
+		},
+		"bottled_blue_morpho_butterfly": {
+			"textures": "textures/items/bottled_blue_morpho_butterfly"
+		},
+		"bottled_monarch_butterfly": {
+			"textures": "textures/items/bottled_monarch_butterfly"
+		},
+		"bottled_red_admiral_butterfly": {
+			"textures": "textures/items/bottled_red_admiral_butterfly"
+		},
+		"bottled_swallowtail_butterfly": {
+			"textures": "textures/items/bottled_swallowtail_butterfly"
+		},
+		"bottled_reji_butterfly": {
+			"textures": "textures/items/bottled_reji_butterfly"
+		},
+		"suspicious_brew": {
+			"textures": "textures/items/suspicious_brew"
+		}
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:farmer_hat",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:armor": {
+				"protection": 1
+			},
+			"minecraft:wearable": {
+				"dispensable": true,
+				"slot": "slot.armor.head"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				},
+				"max_durability": 256
+			},
+			"minecraft:icon": {
+				"texture": "farmer_hat"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "on_use"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.turtleHelmet"
+			}
+		},
+		"events": {
+			"on_use": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"playsound armor.equip_generic @s"
+							],
+							"target": "self"
+						},
+						"condition": "!query.has_armor_slot('slot.armor.head')"
+					}
+				]
+			}
+		}
+	}
+}

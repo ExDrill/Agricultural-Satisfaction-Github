@@ -1,0 +1,86 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Project Farm",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"tomato_crop_1": {
+			"textures": "textures/blocks/tomato/tomato_crop_1"
+		},
+		"tomato_crop_2": {
+			"textures": "textures/blocks/tomato/tomato_crop_2"
+		},
+		"tomato_crop_3": {
+			"textures": "textures/blocks/tomato/tomato_crop_3"
+		},
+		"tomato_crop_4": {
+			"textures": "textures/blocks/tomato/tomato_crop_4"
+		},
+		"wheat_1": {
+			"textures": "textures/blocks/wheat_stage_0"
+		},
+		"wheat_2": {
+			"textures": "textures/blocks/wheat_stage_4"
+		},
+		"wheat_3": {
+			"textures": "textures/blocks/wheat_stage_6"
+		},
+		"wheat_4": {
+			"textures": "textures/blocks/wheat_stage_7"
+		},
+		"carrots_1": {
+			"textures": "textures/blocks/carrots_stage_0"
+		},
+		"carrots_2": {
+			"textures": "textures/blocks/carrots_stage_1"
+		},
+		"carrots_3": {
+			"textures": "textures/blocks/carrots_stage_2"
+		},
+		"carrots_4": {
+			"textures": "textures/blocks/carrots_stage_3"
+		},
+		"potatoes_1": {
+			"textures": "textures/blocks/potatoes_stage_0"
+		},
+		"potatoes_2": {
+			"textures": "textures/blocks/potatoes_stage_1"
+		},
+		"potatoes_3": {
+			"textures": "textures/blocks/potatoes_stage_2"
+		},
+		"potatoes_4": {
+			"textures": "textures/blocks/potatoes_stage_3"
+		},
+		"beetroots_1": {
+			"textures": "textures/blocks/beetroots_stage_0"
+		},
+		"beetroots_2": {
+			"textures": "textures/blocks/beetroots_stage_1"
+		},
+		"beetroots_3": {
+			"textures": "textures/blocks/beetroots_stage_2"
+		},
+		"beetroots_4": {
+			"textures": "textures/blocks/beetroots_stage_3"
+		},
+		"rich_soil": {
+			"textures": "textures/blocks/rich_soil"
+		},
+		"planter_box_side": {
+			"textures": "textures/blocks/planter_box/planter_box_side"
+		},
+		"planter_box_top_1": {
+			"textures": "textures/blocks/planter_box/planter_box_top_1"
+		},
+		"planter_box_top_2": {
+			"textures": "textures/blocks/planter_box/planter_box_top_2"
+		},
+		"planter_box_top_3": {
+			"textures": "textures/blocks/planter_box/planter_box_top_3"
+		},
+		"planter_box_top_4": {
+			"textures": "textures/blocks/planter_box/planter_box_top_4"
+		}
+	}
+}

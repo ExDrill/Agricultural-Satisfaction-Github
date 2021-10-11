@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:tomato_seeds",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tomato_seeds"
+			},
+			"minecraft:block_placer": {
+				"block": "exdrill:tomato_crop"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.seed"
+			}
+		}
+	}
+}

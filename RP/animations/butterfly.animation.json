@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.butterfly.fly": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": 0.5
+				},
+				"body": {
+					"rotation": [-45, 0, 0]
+				},
+				"wing0": {
+					"rotation": [0, 0, "math.cos(query.anim_time*720)*60"]
+				},
+				"wing1": {
+					"rotation": [0, 0, "-math.cos(query.anim_time*720)*60"]
+				}
+			}
+		}
+	}
+}
