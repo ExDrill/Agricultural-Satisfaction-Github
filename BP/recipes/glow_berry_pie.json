@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "exdrill:glow_berry_pie"
+    },    
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "minecraft:glow_berries"
+      },
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "minecraft:egg"
+      }
+    ],
+    "result": {
+      "item": "exdrill:glow_berry_pie"
+    }
+  }
+}

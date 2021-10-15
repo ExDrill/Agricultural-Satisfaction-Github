@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "exdrill:wheat_crop",
+			"identifier": "exdrill:carrots_crop",
 			"properties": {
 				"exdrill:growth": [ 0, 1, 2, 3 ],
 				"exdrill:geometry": [
@@ -22,7 +22,7 @@
 					"condition": "query.block_property('exdrill:growth') < 3"
 				}
 			},
-			"minecraft:loot": "loot_tables/blocks/wheat_incomplete.json",
+			"minecraft:loot": "loot_tables/blocks/carrots/carrots_incomplete.json",
 			"minecraft:geometry": "geometry.crop",
 			"minecraft:on_placed": {
 				"event": "on_placed",
@@ -42,10 +42,6 @@
 					}
 				]
 			},
-			"minecraft:on_player_destroyed": {
-				"event": "destroy",
-				"target": "self"
-			},
 			"minecraft:on_interact": {
 				"event": "fertilize",
 				"target": "self",
@@ -58,8 +54,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "wheat_1",
-							"render_method": "alpha_test"
+							"texture": "carrots_1",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -73,8 +71,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "wheat_2",
-							"render_method": "alpha_test"
+							"texture": "carrots_2",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -88,8 +88,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "wheat_3",
-							"render_method": "alpha_test"
+							"texture": "carrots_3",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -103,15 +105,28 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "wheat_4",
-							"render_method": "alpha_test"
+							"texture": "carrots_4",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
 						"origin": [ -7, 0, -7 ],
 						"size": [ 14, 14, 14 ]
 					},
-					"minecraft:loot": "loot_tables/blocks/wheat.json"
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0.01,
+							0.02
+						],
+						"on_tick": {
+							"event": "transform",
+							"target": "self"
+						}
+					},
+					"minecraft:loot": "loot_tables/blocks/carrots/carrots.json"
 				}
 			},
 			{
@@ -157,16 +172,6 @@
 					}
 				]
 			},
-			"destroy": {
-				"sequence": [
-					{
-						"spawn_loot": {
-							"table": "loot_tables/blocks/wheat_bonus.json"
-						},
-						"condition": "query.block_neighbor_has_any_tag( 0, -1, 0, 'exdrill:planter_box')"
-					}
-				]
-			},
 			"fertilize": {
 				"sequence": [
 					{
@@ -200,6 +205,11 @@
 						"condition": "query.get_equipped_item_name=='bone_meal'"
 					}
 				]
+			},
+			"transform": {
+				"set_block": {
+					"block_type": "exdrill:carrots_crop_complete"
+				}
 			}
 		}
 	}

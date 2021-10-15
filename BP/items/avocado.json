@@ -1,0 +1,13 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:avocado"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "avocado"
+			}
+		}
+	}
+}

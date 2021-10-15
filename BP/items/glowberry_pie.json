@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:glow_berry_pie"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "glowberry_pie"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 2,
+			"minecraft:food": {
+				"can_always_eat": false,
+				"nutrition": 7,
+				"saturation_modifier": "normal"
+			}
+		}
+	}
+}

@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "exdrill:potatoes_crop",
+			"identifier": "exdrill:wheat_crop",
 			"properties": {
 				"exdrill:growth": [ 0, 1, 2, 3 ],
 				"exdrill:geometry": [
@@ -22,7 +22,7 @@
 					"condition": "query.block_property('exdrill:growth') < 3"
 				}
 			},
-			"minecraft:loot": "loot_tables/blocks/potatoes_incomplete.json",
+			"minecraft:loot": "loot_tables/blocks/wheat/wheat_incomplete.json",
 			"minecraft:geometry": "geometry.crop",
 			"minecraft:on_placed": {
 				"event": "on_placed",
@@ -58,8 +58,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "potatoes_1",
-							"render_method": "alpha_test"
+							"texture": "wheat_1",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -73,8 +75,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "potatoes_2",
-							"render_method": "alpha_test"
+							"texture": "wheat_2",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -88,8 +92,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "potatoes_3",
-							"render_method": "alpha_test"
+							"texture": "wheat_3",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -103,15 +109,25 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "potatoes_4",
-							"render_method": "alpha_test"
+							"texture": "wheat_4",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
 						"origin": [ -7, 0, -7 ],
 						"size": [ 14, 14, 14 ]
 					},
-					"minecraft:loot": "loot_tables/blocks/potatoes.json"
+					"minecraft:loot": "loot_tables/blocks/wheat/wheat.json",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [ 0.01, 0.01 ],
+						"on_tick": {
+							"event": "transform",
+							"target": "self"
+						}
+					}
 				}
 			},
 			{
@@ -157,16 +173,6 @@
 					}
 				]
 			},
-			"destroy": {
-				"sequence": [
-					{
-						"spawn_loot": {
-							"table": "loot_tables/blocks/potatoes_bonus.json"
-						},
-						"condition": "query.block_neighbor_has_any_tag( 0, -1, 0, 'exdrill:planter_box')"
-					}
-				]
-			},
 			"fertilize": {
 				"sequence": [
 					{
@@ -200,6 +206,11 @@
 						"condition": "query.get_equipped_item_name=='bone_meal'"
 					}
 				]
+			},
+			"transform": {
+				"set_block": {
+					"block_type": "exdrill:wheat_crop_complete"
+				}
 			}
 		}
 	}

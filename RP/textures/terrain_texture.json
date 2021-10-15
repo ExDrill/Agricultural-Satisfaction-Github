@@ -70,6 +70,9 @@
 		"planter_box_side": {
 			"textures": "textures/blocks/planter_box/planter_box_side"
 		},
+		"planter_box_bottom": {
+			"textures": "textures/blocks/planter_box/planter_box_bottom"
+		},
 		"planter_box_top_1": {
 			"textures": "textures/blocks/planter_box/planter_box_top_1"
 		},
@@ -81,6 +84,48 @@
 		},
 		"planter_box_top_4": {
 			"textures": "textures/blocks/planter_box/planter_box_top_4"
+		},
+		"planter_box_top_5": {
+			"textures": "textures/blocks/planter_box/planter_box_top_5"
+		},
+		"planter_box_top_6": {
+			"textures": "textures/blocks/planter_box/planter_box_top_6"
+		},
+		"planter_box_top_7": {
+			"textures": "textures/blocks/planter_box/planter_box_top_7"
+		},
+		"planter_box_top_8": {
+			"textures": "textures/blocks/planter_box/planter_box_top_8"
+		},
+		"planter_box_top_9": {
+			"textures": "textures/blocks/planter_box/planter_box_top_9"
+		},
+		"planter_box_top_10": {
+			"textures": "textures/blocks/planter_box/planter_box_top_10"
+		},
+		"planter_box_top_11": {
+			"textures": "textures/blocks/planter_box/planter_box_top_11"
+		},
+		"planter_box_top_12": {
+			"textures": "textures/blocks/planter_box/planter_box_top_12"
+		},
+		"planter_box_top_13": {
+			"textures": "textures/blocks/planter_box/planter_box_top_13"
+		},
+		"planter_box_top_14": {
+			"textures": "textures/blocks/planter_box/planter_box_top_14"
+		},
+		"planter_box_top_15": {
+			"textures": "textures/blocks/planter_box/planter_box_top_15"
+		},
+		"planter_box_top_16": {
+			"textures": "textures/blocks/planter_box/planter_box_top_16"
+		},
+		"blender": {
+			"textures": "textures/blocks/blender"
+		},
+		"blender_apple_cider": {
+			"textures": "textures/blocks/blender/apple_cider"
 		}
 	}
 }

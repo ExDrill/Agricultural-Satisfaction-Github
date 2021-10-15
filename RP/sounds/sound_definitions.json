@@ -1,3 +1,13 @@
 {
-	"sound_definitions": {}
+	"format_version": "1.17.20",
+	"sound_definitions": {
+		"blender.blend": {
+			"category": "block",
+			"min_distance": 5,
+			"sounds": [
+				"sounds/blender/blend"
+			],
+			"subtitle": "blender.blend"
+		}
+	}
 }

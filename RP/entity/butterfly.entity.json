@@ -17,11 +17,16 @@
 				"default": "geometry.butterfly"
 			},
 			"animations": {
-				"fly": "animation.butterfly.fly"
+				"fly": "animation.butterfly.fly",
+				"sparkle": "animation.butterfly.sparkle"
+			},
+			"particle_effects": {
+				"sparkle": "exdrill:butterfly_sparkles"
 			},
 			"scripts": {
 				"animate": [
-					"fly"
+					"fly",
+					"sparkle"
 				]
 			},
 			"render_controllers": [

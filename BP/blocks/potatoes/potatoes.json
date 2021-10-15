@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "exdrill:beetroots_crop",
+			"identifier": "exdrill:potatoes_crop",
 			"properties": {
 				"exdrill:growth": [ 0, 1, 2, 3 ],
 				"exdrill:geometry": [
@@ -22,7 +22,7 @@
 					"condition": "query.block_property('exdrill:growth') < 3"
 				}
 			},
-			"minecraft:loot": "loot_tables/blocks/beetroots_incomplete.json",
+			"minecraft:loot": "loot_tables/blocks/potatoes/potatoes_incomplete.json",
 			"minecraft:geometry": "geometry.crop",
 			"minecraft:on_placed": {
 				"event": "on_placed",
@@ -42,13 +42,10 @@
 					}
 				]
 			},
-			"minecraft:on_player_destroyed": {
-				"event": "destroy",
-				"target": "self"
-			},
 			"minecraft:on_interact": {
 				"event": "fertilize",
-				"target": "self"
+				"target": "self",
+				"condition": "query.block_property('exdrill:growth') < 3"
 			}
 		},
 		"permutations": [
@@ -57,8 +54,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "beetroots_1",
-							"render_method": "alpha_test"
+							"texture": "potatoes_1",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -72,8 +71,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "beetroots_2",
-							"render_method": "alpha_test"
+							"texture": "potatoes_2",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -87,8 +88,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "beetroots_3",
-							"render_method": "alpha_test"
+							"texture": "potatoes_3",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -102,15 +105,28 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "beetroots_4",
-							"render_method": "alpha_test"
+							"texture": "potatoes_4",
+							"render_method": "alpha_test",
+							"ambient_occlusion": false,
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
 						"origin": [ -7, 0, -7 ],
 						"size": [ 14, 14, 14 ]
 					},
-					"minecraft:loot": "loot_tables/blocks/beetroots.json"
+					"minecraft:loot": "loot_tables/blocks/potatoes/potatoes.json",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0.01,
+							0.02
+						],
+						"on_tick": {
+							"event": "transform",
+							"target": "self"
+						}
+					}
 				}
 			},
 			{
@@ -156,16 +172,6 @@
 					}
 				]
 			},
-			"destroy": {
-				"sequence": [
-					{
-						"spawn_loot": {
-							"table": "loot_tables/blocks/beetroots_bonus.json"
-						},
-						"condition": "query.block_neighbor_has_any_tag( 0, -1, 0, 'exdrill:planter_box')"
-					}
-				]
-			},
 			"fertilize": {
 				"sequence": [
 					{
@@ -196,21 +202,14 @@
 								"weight": 2
 							}
 						],
-						"condition": "query.get_equipped_item_name=='bone_meal' ? query.block_property('exdrill:growth') < 3"
-					},
-					{
-						"condition": "query.get_equipped_item_name=='suspicious_brew' ? query.block_neighbor_has_any_tag( 0, -1, 0, 'exdrill:planter_box') ? query.block_property('exdrill:growth') == 3",
-						"run_command": {
-							"command": [
-								"summon exdrill:beetroot_buddy ~ ~ ~ minecraft:entity_spawned",
-								"playsound item.trident.thunder @a ~ ~ ~",
-								"setblock ~ ~ ~ air",
-								"particle exdrill:dig_particle ~ ~ ~"
-							],
-							"target": "self"
-						}
+						"condition": "query.get_equipped_item_name=='bone_meal'"
 					}
 				]
+			},
+			"transform": {
+				"set_block": {
+					"block_type": "exdrill:potatoes_crop_complete"
+				}
 			}
 		}
 	}

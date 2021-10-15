@@ -182,19 +182,24 @@
 					}
 				]
 			},
-			"minecraft:movement.fly": {},
-			"minecraft:navigation.fly": {},
+			"minecraft:movement.hover": {},
+			"minecraft:navigation.hover": {
+				"can_path_over_water": true,
+                "can_sink": false,
+                "can_pass_doors": false,
+                "can_path_from_air": true,
+                "avoid_water": true,
+                "avoid_damage_blocks": true,
+                "avoid_sun": false
+			},
 			"minecraft:behavior.random_hover": {
 				"priority": 1,
-				"hover_height": [ 2, 3 ],
+				"hover_height": [ 1, 2 ],
 				"interval": 1,
 				"xz_dist": 30,
 				"y_dist": 30,
 				"y_offset": 1,
 				"speed_multiplier": 0.5
-			},
-			"minecraft:ground_offset": {
-				"value": 1
 			},
 			"minecraft:flying_speed": {
 				"value": 0.2

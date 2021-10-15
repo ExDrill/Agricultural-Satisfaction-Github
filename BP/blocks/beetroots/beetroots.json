@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "exdrill:carrots_crop",
+			"identifier": "exdrill:beetroots_crop",
 			"properties": {
 				"exdrill:growth": [ 0, 1, 2, 3 ],
 				"exdrill:geometry": [
@@ -22,7 +22,7 @@
 					"condition": "query.block_property('exdrill:growth') < 3"
 				}
 			},
-			"minecraft:loot": "loot_tables/blocks/carrots_incomplete.json",
+			"minecraft:loot": "loot_tables/blocks/beetroots/beetroots_incomplete.json",
 			"minecraft:geometry": "geometry.crop",
 			"minecraft:on_placed": {
 				"event": "on_placed",
@@ -48,8 +48,7 @@
 			},
 			"minecraft:on_interact": {
 				"event": "fertilize",
-				"target": "self",
-				"condition": "query.block_property('exdrill:growth') < 3"
+				"target": "self"
 			}
 		},
 		"permutations": [
@@ -58,8 +57,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "carrots_1",
-							"render_method": "alpha_test"
+							"texture": "beetroots_1",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -73,8 +74,11 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "carrots_2",
-							"render_method": "alpha_test"
+							"texture": "beetroots_2",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+
 						}
 					},
 					"minecraft:pick_collision": {
@@ -88,8 +92,10 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "carrots_3",
-							"render_method": "alpha_test"
+							"texture": "beetroots_3",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -103,15 +109,28 @@
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "carrots_4",
-							"render_method": "alpha_test"
+							"texture": "beetroots_4",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
 						}
 					},
 					"minecraft:pick_collision": {
 						"origin": [ -7, 0, -7 ],
 						"size": [ 14, 14, 14 ]
 					},
-					"minecraft:loot": "loot_tables/blocks/carrots.json"
+					"minecraft:loot": "loot_tables/blocks/beetroots/beetroots.json",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0.01,
+							0.02
+						],
+						"on_tick": {
+							"event": "transform",
+							"target": "self"
+						}
+					}
 				}
 			},
 			{
@@ -157,16 +176,6 @@
 					}
 				]
 			},
-			"destroy": {
-				"sequence": [
-					{
-						"spawn_loot": {
-							"table": "loot_tables/blocks/carrots_bonus.json"
-						},
-						"condition": "query.block_neighbor_has_any_tag( 0, -1, 0, 'exdrill:planter_box')"
-					}
-				]
-			},
 			"fertilize": {
 				"sequence": [
 					{
@@ -197,9 +206,14 @@
 								"weight": 2
 							}
 						],
-						"condition": "query.get_equipped_item_name=='bone_meal'"
+						"condition": "query.get_equipped_item_name=='bone_meal' ? query.block_property('exdrill:growth') < 3"
 					}
 				]
+			},
+			"transform": {
+				"set_block": {
+					"block_type": "exdrill:beetroots_crop_complete"
+				}
 			}
 		}
 	}

@@ -7,7 +7,11 @@ item.exdrill:farmer_hat=Gorro de granjero
 item.exdrill:bottled_butterfly=Mariposa en una botella
 item.exdrill:bottled_worm=Gusano en una botella
 item.exdrill:suspicious_brew=Botella sospechosa
-
+item.exdrill:plate=Plato
+item.exdrill:cup=Taza
+item.exdrill:apple_cider=Sidra de manzana
+item.exdrill:glow_berry_pie=Tarta de bayas resplandecientes
+item.exdrill:avocado=Palta
 ##Blocks
 tile.exdrill:rich_soil.name=Tierra rica
 Maceterotile.exdrill:planter_box.name=Macetero

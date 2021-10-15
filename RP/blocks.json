@@ -25,5 +25,23 @@
 	},
 	"exdrill:beetroots_crop": {
 		"sound": "grass"
+	},
+	"exdrill:beetroots_crop_complete": {
+		"sound": "grass"
+	},
+	"exdrill:carrots_crop_complete": {
+		"sound": "grass"
+	},
+	"exdrill:potatoes_crop_complete": {
+		"sound": "grass"
+	},
+	"exdrill:tomato_crop_complete": {
+		"sound": "grass"
+	},
+	"exdrill:wheat_crop_complete": {
+		"sound": "grass"
+	},
+	"exdrill:blender": {
+		"sound": "anvil"
 	}
 }

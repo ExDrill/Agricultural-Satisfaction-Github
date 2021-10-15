@@ -4,17 +4,39 @@
 		"description": {
 			"identifier": "exdrill:planter_box",
 			"properties": {
-				"exdrill:direction": [
-					2,
-					3,
-					4,
-					5
+				"exdrill:north": [
+					false,
+					true
+				],
+				"exdrill:south": [
+					false,
+					true
+				],
+				"exdrill:east": [
+					false,
+					true
+				],
+				"exdrill:west": [
+					false,
+					true
 				],
 				"exdrill:top_face_adjustment": [
 					0,
 					1,
 					2,
-					3
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
 				]
 			}
 		},
@@ -31,7 +53,7 @@
 			},
 			"minecraft:ticking": {
 				"looping": true,
-				"range": [ 0.1, 0.11 ],
+				"range": [ 0.05, 0.05 ],
 				"on_tick": {
 					"event": "adjust",
 					"target": "self"
@@ -40,30 +62,6 @@
 			"tag:exdrill:planter_box": {}
 		},
 		"permutations": [
-			{
-				"condition": "query.block_property('exdrill:direction') == 2",
-				"components": {}
-			},
-			{
-				"condition": "query.block_property('exdrill:direction') == 3",
-				"components": {}
-			},
-			{
-				"condition": "query.block_property('exdrill:direction') == 4",
-				"components": {
-					"minecraft:rotation": [
-						0, -90, 0
-					]
-				}
-			},
-			{
-				"condition": "query.block_property('exdrill:direction') == 5",
-				"components": {
-					"minecraft:rotation": [
-						0, -90, 0
-					]
-				}
-			},
 			{
 				"condition": "query.block_property('exdrill:top_face_adjustment') == 0",
 				"components": {
@@ -84,7 +82,7 @@
 							"texture": "planter_box_side"
 						},
 						"down": {
-							"texture": "planter_box_top_1"
+							"texture": "planter_box_bottom"
 						}
 					}
 				}
@@ -109,7 +107,7 @@
 							"texture": "planter_box_side"
 						},
 						"down": {
-							"texture": "planter_box_top_2"
+							"texture": "planter_box_bottom"
 						}
 					}
 				}
@@ -134,7 +132,7 @@
 							"texture": "planter_box_side"
 						},
 						"down": {
-							"texture": "planter_box_top_3"
+							"texture": "planter_box_bottom"
 						}
 					}
 				}
@@ -159,7 +157,307 @@
 							"texture": "planter_box_side"
 						},
 						"down": {
-							"texture": "planter_box_top_4"
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_5"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_6"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_7"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 7",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_8"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 8",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_9"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 9",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_10"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 10",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_11"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 11",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_12"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 12",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_13"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 13",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_14"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 14",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_15"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('exdrill:top_face_adjustment') == 15",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"texture": "planter_box_top_16"
+						},
+						"north": {
+							"texture": "planter_box_side"
+						},
+						"south": {
+							"texture": "planter_box_side"
+						},
+						"west": {
+							"texture": "planter_box_side"
+						},
+						"east": {
+							"texture": "planter_box_side"
+						},
+						"down": {
+							"texture": "planter_box_bottom"
 						}
 					}
 				}
@@ -172,53 +470,158 @@
 						"set_block_property": {
 							"exdrill:top_face_adjustment": 0
 						}
-					},
-					{
-						"set_block_property": {
-							"exdrill:direction": "query.cardinal_facing_2d"
-						}
 					}
 				]
 			},
 			"adjust": {
 				"sequence": [
-					// North and South
+					// North Property
+					{
+						"set_block_property": {
+							"exdrill:north": true
+						},
+						"condition": "query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box')"
+					},
+					{
+						"set_block_property": {
+							"exdrill:north": false
+						},
+						"condition": "!query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box')"
+					},
+					// South Property
+					{
+						"set_block_property": {
+							"exdrill:south": true
+						},
+						"condition": "query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box')"
+					},
+					{
+						"set_block_property": {
+							"exdrill:south": false
+						},
+						"condition": "!query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box')"
+					},
+					// East Property
+					{
+						"set_block_property": {
+							"exdrill:east": true
+						},
+						"condition": "query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box')"
+					},
+					{
+						"set_block_property": {
+							"exdrill:east": false
+						},
+						"condition": "!query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box')"
+					},
+					// West Property
+					{
+						"set_block_property": {
+							"exdrill:west": true
+						},
+						"condition": "query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box')"
+					},
+					{
+						"set_block_property": {
+							"exdrill:west": false
+						},
+						"condition": "!query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box')"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 0
+						},
+						"condition": "query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == false && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == false"
+					},
 					{
 						"set_block_property": {
 							"exdrill:top_face_adjustment": 1
 						},
-						"condition": "query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box') && query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 2 || query.block_property('exdrill:direction') == 3"
-					},
-					{
-						"set_block_property": {
-							"exdrill:top_face_adjustment": 3
-						},
-						"condition": "query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 2 || query.block_property('exdrill:direction') == 3"
+						"condition": "query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == true && query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == false"
 					},
 					{
 						"set_block_property": {
 							"exdrill:top_face_adjustment": 2
 						},
-						"condition": "query.block_neighbor_has_any_tag( 1, 0, 0, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( -1, 0, 0, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 2 || query.block_property('exdrill:direction') == 3"
-					},
-					// East and West
-					{
-						"set_block_property": {
-							"exdrill:top_face_adjustment": 1
-						},
-						"condition": "query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box') && query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 4 || query.block_property('exdrill:direction') == 5"
+						"condition": "query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == false && query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == false"
 					},
 					{
 						"set_block_property": {
 							"exdrill:top_face_adjustment": 3
 						},
-						"condition": "query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 4 || query.block_property('exdrill:direction') == 5"
+						"condition": "query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == false && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == true"
 					},
 					{
 						"set_block_property": {
-							"exdrill:top_face_adjustment": 2
+							"exdrill:top_face_adjustment": 4
 						},
-						"condition": "query.block_neighbor_has_any_tag( 0, 0, 1, 'exdrill:planter_box') && !query.block_neighbor_has_any_tag( 0, 0, -1, 'exdrill:planter_box') ? query.block_property('exdrill:direction') == 4 || query.block_property('exdrill:direction') == 5"
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == true"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 5
+						},
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == false && query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == true"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 6
+						},
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == false"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 7
+						},
+						"condition": "query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == true"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 8
+						},
+						"condition": "query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == false"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 9
+						},
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == false && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == false"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 10
+						},
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == false"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 11
+						},
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == true"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 12
+						},
+						"condition": "query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == false"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 13
+						},
+						"condition": "query.block_property('exdrill:north') == false && query.block_property('exdrill:south') == true && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == true"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 14
+						},
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == false && query.block_property('exdrill:east') == false && query.block_property('exdrill:west') == true"
+					},
+					{
+						"set_block_property": {
+							"exdrill:top_face_adjustment": 15
+						},
+						"condition": "query.block_property('exdrill:north') == true && query.block_property('exdrill:south') == false && query.block_property('exdrill:east') == true && query.block_property('exdrill:west') == false"
 					}
 				]
 			}

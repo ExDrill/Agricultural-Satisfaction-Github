@@ -22,13 +22,21 @@
 			"tamed": {
 				"minecraft:is_tamed": {},
 				"minecraft:behavior.follow_owner": {
-					"priority": 1,
-					"start_distance": 5,
-					"stop_distance": 4
+					"priority": 2,
+					"start_distance": 8,
+					"stop_distance": 6
 				},
 				"minecraft:sittable": {},
 				"minecraft:behavior.stay_while_sitting": {
 					"priority": 0
+				},
+				"minecraft:healable": {
+					"items": [
+						{
+							"item": "beetroot",
+							"heal_amount": 3
+						}
+					]
 				}
 			}
 		},
@@ -36,6 +44,9 @@
 			"minecraft:health": {
 				"value": 20,
 				"max": 20
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/beetroot_buddy.json"
 			},
 			"minecraft:movement": {
 				"value": 0.2
@@ -45,6 +56,7 @@
 				"total_supply": 20,
 				"suffocate_time": 15
 			},
+
 			"minecraft:leashable": {},
 			"minecraft:nameable": {},
 			"minecraft:balloonable": {},
@@ -54,9 +66,17 @@
 					"beetroot_buddy"
 				]
 			},
+			"minecraft:inventory": {
+				"inventory_size": 27,
+				"private": false,
+				"can_be_siphoned_from": true
+			},
 			"minecraft:collision_box": {
 				"height": 0.4,
 				"width": 0.4
+			},
+			"minecraft:follow_range": {
+				"value": 128
 			},
 			"minecraft:pushable": {},
 			"minecraft:movement.basic": {},
@@ -65,19 +85,7 @@
 			},
 			"minecraft:jump.static": {},
 			"minecraft:can_climb": {},
-			"minecraft:behavior.float": {},
-			"minecraft:behavior.random_stroll": {
-				"priority": 2,
-				"interval": 0.5,
-				"xz_dist": 5,
-				"y_dist": 5
-			},
-			"minecraft:behavior.look_at_player": {
-				"priority": 2
-			},
-			"minecraft:behavior.random_look_around": {
-				"priority": 2
-			}
+			"minecraft:behavior.float": {}
 		},
 		"events": {
 			"minecraft:entity_spawned": {

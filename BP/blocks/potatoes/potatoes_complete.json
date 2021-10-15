@@ -1,0 +1,96 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "exdrill:potatoes_crop_complete",
+			"properties": {
+				"exdrill:geometry": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 0,
+			"minecraft:entity_collision": false,
+			"minecraft:loot": "loot_tables/blocks/potatoes/potatoes.json",
+			"minecraft:geometry": "geometry.crop",
+			"minecraft:on_placed": {
+				"event": "on_placed",
+				"target": "self"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "potatoes_4",
+					"face_dimming": false,
+					"render_method": "alpha_test",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [ -7, 0, -7 ],
+				"size": [ 14, 14, 14 ]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"minecraft:farmland",
+							"exdrill:planter_box"
+						]
+					}
+				]
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "destroy",
+				"target": "self"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('exdrill:geometry') == 0",
+				"components": {}
+			},
+			{
+				"condition": "query.block_property('exdrill:geometry') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.crop_planter_box"
+				}
+			}
+		],
+		"events": {
+			"on_placed": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"exdrill:geometry": 1
+						},
+						"condition": "query.block_neighbor_has_any_tag(0, -1, 0, 'exdrill:planter_box')"
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle exdrill:crop_alert",
+								"playsound note.bit @a ~ ~ ~ 0.6"
+							]
+						}
+					}
+				]
+			},
+			"destroy": {
+				"sequence": [
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/potatoes/potatoes_bonus.json"
+						},
+						"condition": "query.block_neighbor_has_any_tag( 0, -1, 0, 'exdrill:planter_box')"
+					}
+				]
+			}
+		}
+	}
+}

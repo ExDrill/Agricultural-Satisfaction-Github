@@ -7,15 +7,22 @@ item.exdrill:farmer_hat=Farmer's Hat
 item.exdrill:bottled_butterfly=Bottled Butterfly
 item.exdrill:bottled_worm=Bottled Worm
 item.exdrill:suspicious_brew=Suspicious Brew
+item.exdrill:plate=Plate
+item.exdrill:cup=Cup
+item.exdrill:apple_cider=Apple Cider
+item.exdrill:glow_berry_pie=Glow Berry Pie
+item.exdrill:avocado=Avocado
 
 ##Blocks
 tile.exdrill:rich_soil.name=Rich Soil
 tile.exdrill:planter_box.name=Planter Box
-entity.exdrill:beetroot_buddy.name=Beetroot Buddy
+tile.exdrill:blender.name=Blender
+
 
 ##Entities
 entity.exdrill:butterfly.name=Butterfly
 entity.exdrill:worm.name=Worm
+entity.exdrill:beetroot_buddy.name=Beetroot Buddy
 
 ##Spawn Eggs
 item.spawn_egg.entity.exdrill:butterfly.name=Spawn Butterfly

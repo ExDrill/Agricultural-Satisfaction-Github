@@ -1,5 +1,6 @@
 {
   "tiers": [
+    // Tier 1
     {
       "total_exp_required": 0,
       "groups": [
@@ -126,6 +127,7 @@
         }
       ]
     },
+    // Tier 2
     {
       "total_exp_required": 10,
       "groups": [
@@ -190,11 +192,33 @@
               "trader_exp": 5,
               "max_uses": 16,
               "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "exdrill:rich_soil",
+                  "quantity": {
+                    "min": 15,
+                    "max": 20
+                  },
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 5
+                  }
+                }
+              ]
             }
           ]
         }
       ]
     },
+    // Tier 3
     {
       "total_exp_required": 70,
       "groups": [
@@ -246,6 +270,7 @@
         }
       ]
     },
+    // Tier 4
     {
       "total_exp_required": 150,
       "groups": [
@@ -306,6 +331,7 @@
         }
       ]
     },
+    // Tier 5
     {
       "total_exp_required": 250,
       "groups": [

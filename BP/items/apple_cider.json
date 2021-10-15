@@ -1,0 +1,35 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:apple_cider"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "apple_cider"
+			},
+			"minecraft:food": {
+				"can_always_eat": false,
+				"nutrition": 1,
+				"saturation_modifier": "poor",
+				"using_converts_to": "exdrill:cup",
+				"on_consume": {
+					"event": "on_consume",
+					"target": "self"
+				}
+			},
+			"minecraft:use_duration": 1,
+			"minecraft:use_animation": "drink"
+		},
+		"events": {
+			"on_consume": {
+				"add_mob_effect": {
+					"amplifier": 0,
+					"effect": "speed",
+					"duration": 3.5,
+					"target": "self"
+				}
+			}
+		}
+	}
+}

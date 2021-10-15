@@ -34,6 +34,21 @@
 		},
 		"suspicious_brew": {
 			"textures": "textures/items/suspicious_brew"
+		},
+		"plate": {
+			"textures": "textures/items/plate"
+		},
+		"cup": {
+			"textures": "textures/items/cup"
+		},
+		"apple_cider": {
+			"textures": "textures/items/apple_cider"
+		},
+		"avocado": {
+			"textures": "textures/items/avocado"
+		},
+		"glowberry_pie": {
+			"textures": "textures/items/glowberry_pie"
 		}
 	}
 }

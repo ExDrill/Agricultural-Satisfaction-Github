@@ -35,7 +35,10 @@
 				"minecraft:variant": {
 					"value": 0
 				},
-				"minecraft:pushable": {}
+				"minecraft:pushable": {},
+				"minecraft:movement": {
+					"value": 0.15
+				}
 			},
 			"digging": {
 				"minecraft:variant": {
@@ -51,6 +54,9 @@
 				},
 				"minecraft:knockback_resistance": {
 					"value": 1
+				},
+				"minecraft:movement": {
+					"value": 0
 				}
 			}
 		},
@@ -58,9 +64,6 @@
 			"minecraft:health": {
 				"value": 10,
 				"max": 10
-			},
-			"minecraft:movement": {
-				"value": 0.15
 			},
 			"minecraft:physics": {},
 			"minecraft:breathable": {
@@ -153,7 +156,7 @@
 								"execute @s ~ ~ ~ detect ~ ~-1 ~ dirt 1 event entity @s start_digging"
 							]
 						},
-						"weight": 49
+						"weight": 74
 					},
 					{
 						"weight": 1

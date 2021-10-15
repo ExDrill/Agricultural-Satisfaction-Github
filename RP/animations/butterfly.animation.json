@@ -17,6 +17,15 @@
 					"rotation": [0, 0, "-math.cos(query.anim_time*720)*60"]
 				}
 			}
+		},
+		"animation.butterfly.sparkle": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "sparkle",
+					"locator": "sparkle"
+				}
+			}
 		}
 	}
 }

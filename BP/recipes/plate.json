@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "exdrill:plate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:quartz"
+			}
+		},
+		"result": {
+			"item": "exdrill:plate",
+			"count": 1
+		}
+	}
+}

@@ -22,7 +22,7 @@
 					"condition": "query.block_property('exdrill:growth') < 3"
 				}
 			},
-			"minecraft:loot": "loot_tables/blocks/tomato_crop_incomplete.json",
+			"minecraft:loot": "loot_tables/blocks/tomato/tomato_crop_incomplete.json",
 			"minecraft:geometry": "geometry.crop",
 			"minecraft:on_placed": {
 				"event": "on_placed",
@@ -46,10 +46,6 @@
 				"event": "fertilize",
 				"target": "self",
 				"condition": "query.block_property('exdrill:growth') < 3"
-			},
-			"minecraft:on_player_destroyed": {
-				"event": "destroy",
-				"target": "self"
 			}
 		},
 		"permutations": [
@@ -61,7 +57,7 @@
 							"texture": "tomato_crop_1",
 							"render_method": "alpha_test",
 							"ambient_occlusion": false,
-							"face_dimming": true
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -78,7 +74,7 @@
 							"texture": "tomato_crop_2",
 							"render_method": "alpha_test",
 							"ambient_occlusion": false,
-							"face_dimming": true
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -95,7 +91,7 @@
 							"texture": "tomato_crop_3",
 							"render_method": "alpha_test",
 							"ambient_occlusion": false,
-							"face_dimming": true
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
@@ -112,14 +108,24 @@
 							"texture": "tomato_crop_4",
 							"render_method": "alpha_test",
 							"ambient_occlusion": false,
-							"face_dimming": true
+							"face_dimming": false
 						}
 					},
 					"minecraft:pick_collision": {
 						"origin": [ -7, 0, -7 ],
 						"size": [ 14, 14, 14 ]
 					},
-					"minecraft:loot": "loot_tables/blocks/tomato_crop.json"
+					"minecraft:loot": "loot_tables/blocks/tomato/tomato_crop.json",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0.01, 0.02
+						],
+						"on_tick": {
+							"event": "transform",
+							"target": "self"
+						}
+					}
 				}
 			},
 			{
@@ -165,16 +171,6 @@
 					}
 				]
 			},
-			"destroy": {
-				"sequence": [
-					{
-						"spawn_loot": {
-							"table": "loot_tables/blocks/tomatoes_bonus.json"
-						},
-						"condition": "query.block_neighbor_has_any_tag( 0, -1, 0, 'exdrill:planter_box')"
-					}
-				]
-			},
 			"fertilize": {
 				"sequence": [
 					{
@@ -208,6 +204,11 @@
 						"condition": "query.get_equipped_item_name=='bone_meal'"
 					}
 				]
+			},
+			"transform": {
+				"set_block": {
+					"block_type": "exdrill:tomato_crop_complete"
+				}
 			}
 		}
 	}
