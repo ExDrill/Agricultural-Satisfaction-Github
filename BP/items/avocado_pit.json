@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:avocado_pit"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "avocado_pit"
+			},
+			"minecraft:block_placer": {
+				"block": "exdrill:avocado_crop"
+			}
+		}
+	}
+}

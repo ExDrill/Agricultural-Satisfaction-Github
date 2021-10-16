@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:mashed_potatoes"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "mashed_potatoes"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.8,
+			"minecraft:food": {
+				"can_always_eat": false,
+				"nutrition": 8,
+				"saturation_modifier": "good"
+			}
+		}
+	}
+}

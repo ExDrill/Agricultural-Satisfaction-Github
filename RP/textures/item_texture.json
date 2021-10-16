@@ -47,8 +47,14 @@
 		"avocado": {
 			"textures": "textures/items/avocado"
 		},
+		"avocado_pit": {
+			"textures": "textures/items/avocado_pit"
+		},
 		"glowberry_pie": {
 			"textures": "textures/items/glowberry_pie"
+		},
+		"mashed_potatoes": {
+			"textures": "textures/items/mashed_potatoes"
 		}
 	}
 }

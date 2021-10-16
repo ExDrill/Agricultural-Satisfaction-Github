@@ -12,6 +12,7 @@ item.exdrill:cup=Cup
 item.exdrill:apple_cider=Apple Cider
 item.exdrill:glow_berry_pie=Glow Berry Pie
 item.exdrill:avocado=Avocado
+item.exdrill:avocado_pit=Avocado Pit
 
 ##Blocks
 tile.exdrill:rich_soil.name=Rich Soil

@@ -64,6 +64,18 @@
 		"beetroots_4": {
 			"textures": "textures/blocks/beetroots_stage_3"
 		},
+		"avocado_1": {
+			"textures": "textures/blocks/avocado/avocado_stage_1"
+		},
+		"avocado_2": {
+			"textures": "textures/blocks/avocado/avocado_stage_2"
+		},
+		"avocado_3": {
+			"textures": "textures/blocks/avocado/avocado_stage_3"
+		},
+		"avocado_4": {
+			"textures": "textures/blocks/avocado/avocado_stage_4"
+		},
 		"rich_soil": {
 			"textures": "textures/blocks/rich_soil"
 		},

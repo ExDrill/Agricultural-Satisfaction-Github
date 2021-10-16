@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "exdrill:mashed_potatoes"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 4,
+				"item": "exdrill:potato"
+			},
+			{
+				"count": 1,
+				"item": "exdrill:plate"
+			}
+		],
+		"result": [
+			{
+				"count": 2,
+				"item": "exdrill:mashed_potatoes"
+			}
+		]
+	}
+}

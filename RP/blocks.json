@@ -26,6 +26,9 @@
 	"exdrill:beetroots_crop": {
 		"sound": "grass"
 	},
+	"exdrill:avocado_crop": {
+		"sound": "grass"
+	},
 	"exdrill:beetroots_crop_complete": {
 		"sound": "grass"
 	},
@@ -39,6 +42,9 @@
 		"sound": "grass"
 	},
 	"exdrill:wheat_crop_complete": {
+		"sound": "grass"
+	},
+	"exdrill:avocado_crop_complete": {
 		"sound": "grass"
 	},
 	"exdrill:blender": {

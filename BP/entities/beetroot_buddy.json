@@ -37,6 +37,16 @@
 							"heal_amount": 3
 						}
 					]
+				},
+				"minecraft:break_blocks": {
+					"breakable_blocks": [
+						"exdrill:tomato_crop_complete",
+						"exdrill:potatoes_crop_complete",
+						"exdrill:carrots_crop_complete",
+						"exdrill:wheat_crop_complete",
+						"exdrill:beetroots_crop_complete",
+						"exdrill:avocado_crop_complete"
+					]
 				}
 			}
 		},
