@@ -12,6 +12,8 @@ item.exdrill:cup=Taza
 item.exdrill:apple_cider=Sidra de manzana
 item.exdrill:glow_berry_pie=Tarta de bayas resplandecientes
 item.exdrill:avocado=Palta
+item.exdrill:avocado_pit=Hueso de Palta
+item.exdrill:mashed_potatoes.name=Puré de papas.
 ##Blocks
 tile.exdrill:rich_soil.name=Tierra rica
 Maceterotile.exdrill:planter_box.name=Macetero
