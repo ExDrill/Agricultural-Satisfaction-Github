@@ -132,12 +132,6 @@
 		},
 		"planter_box_top_16": {
 			"textures": "textures/blocks/planter_box/planter_box_top_16"
-		},
-		"blender": {
-			"textures": "textures/blocks/blender"
-		},
-		"blender_apple_cider": {
-			"textures": "textures/blocks/blender/apple_cider"
 		}
 	}
 }

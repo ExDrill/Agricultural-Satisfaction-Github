@@ -200,7 +200,7 @@
 									"target": "self"
 								},
 								"decrement_stack": {},
-								"weight": 2
+								"weight": 1
 							}
 						],
 						"condition": "query.get_equipped_item_name=='bone_meal'"

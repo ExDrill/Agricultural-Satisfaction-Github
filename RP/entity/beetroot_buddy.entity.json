@@ -7,7 +7,8 @@
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/beetroot_buddy"
+				"default": "textures/entity/beetroot_buddy/beetroot_buddy",
+				"sleeping": "textures/entity/beetroot_buddy/beetroot_buddy_sleeping"
 			},
 			"geometry": {
 				"default": "geometry.beetroot_buddy"
@@ -15,19 +16,19 @@
 			"animations": {
 				"move": "animation.beetroot_buddy.walk",
 				"pop_up": "animation.beetroot_buddy.pop_up",
-				"sit": "animation.beetroot_buddy.sit"
+				"sleeping": "animation.beetroot_buddy.sleeping",
+				"controller": "controller.animation.beetroot_buddy"
 			},
 			"scripts": {
 				"animate": [
-					"move",
-					"pop_up",
-					{
-						"sit": "query.is_sitting"
-					}
+					"controller"
 				]
 			},
+			"particle_effects": {
+				"zzz": "exdrill:zzz"
+			},
 			"render_controllers": [
-				"controller.render.default"
+				"controller.render.beetroot_buddy"
 			],
 			"spawn_egg": {
 				"base_color": "#6b1344",

@@ -7,34 +7,265 @@
 			"is_spawnable": true
 		},
 		"component_groups": {
-			"wild": {
-				"minecraft:tameable": {
-					"probability": 1,
-					"tame_items": [
-						"minecraft:beetroot"
-					],
-					"tame_event": {
-						"event": "exdrill:on_tamed",
+			"scale": {
+				"minecraft:scale": {
+					"value": 1.2
+				}
+			},
+			"can_harvest": {
+				"minecraft:behavior.eat_block": {
+					"priority": 0,
+					"time_until_eat": 1,
+					"success_chance": 0.5,
+					"on_eat": {
+						"event": "on_eat",
 						"target": "self"
+					},
+					"eat_and_replace_block_pairs": [
+						{
+							"eat_block": "exdrill:wheat_crop_complete",
+							"replace_block": "exdrill:wheat_crop"
+						},
+						{
+							"eat_block": "exdrill:potatoes_crop_complete",
+							"replace_block": "exdrill:potatoes_crop"
+						},
+						{
+							"eat_block": "exdrill:carrots_crop_complete",
+							"replace_block": "exdrill:carrots_crop"
+						},
+						{
+							"eat_block": "exdrill:tomato_crop_complete",
+							"replace_block": "exdrill:tomato_crop"
+						},
+						{
+							"eat_block": "exdrill:beetroots_crop_complete",
+							"replace_block": "exdrill:beetroots_crop"
+						},
+						{
+							"eat_block": "exdrill:tomato_crop_complete",
+							"replace_block": "exdrill:tomato_crop"
+						},
+						{
+							"eat_block": "exdrill:avocado_crop_complete",
+							"replace_block": "exdrill:avocado_crop"
+						}
+					]
+				},
+				"minecraft:behavior.equip_item": {
+					"priority": 1
+					},
+				"minecraft:equip_item": {},
+				"minecraft:behavior.move_to_block": {
+					"priority": 1,
+					"goal_radius": 0,
+					"speed_multiplier": 0.8,
+					"tick_interval": 1,
+					"target_selection_method": "random",
+					"search_range": 5,
+					"search_height": 3,
+					"stay_duration": 3,
+					"target_blocks": [
+						"exdrill:wheat_crop_complete",
+						"exdrill:potatoes_crop_complete",
+						"exdrill:carrots_crop_complete",
+						"exdrill:tomato_crop_complete",
+						"exdrill:avocado_crop_complete",
+						"exdrill:beetroots_crop_complete"
+					]
+				},
+				"minecraft:behavior.random_stroll": {
+					"priority": 4,
+					"interval": 0.5,
+					"xz_dist": 5,
+					"y_dist": 3,
+					"speed_multiplier": 0.8
+				}
+			},
+			"can_harvest_low": {
+				"minecraft:behavior.eat_block": {
+					"priority": 0,
+					"time_until_eat": 1.5,
+					"success_chance": 0.2,
+					"on_eat": {
+						"event": "on_eat",
+						"target": "self"
+					},
+					"eat_and_replace_block_pairs": [
+						{
+							"eat_block": "exdrill:wheat_crop_complete",
+							"replace_block": "exdrill:wheat_crop"
+						},
+						{
+							"eat_block": "exdrill:potatoes_crop_complete",
+							"replace_block": "exdrill:potatoes_crop"
+						},
+						{
+							"eat_block": "exdrill:carrots_crop_complete",
+							"replace_block": "exdrill:carrots_crop"
+						},
+						{
+							"eat_block": "exdrill:tomato_crop_complete",
+							"replace_block": "exdrill:tomato_crop"
+						},
+						{
+							"eat_block": "exdrill:beetroots_crop_complete",
+							"replace_block": "exdrill:beetroots_crop"
+						},
+						{
+							"eat_block": "exdrill:tomato_crop_complete",
+							"replace_block": "exdrill:tomato_crop"
+						},
+						{
+							"eat_block": "exdrill:avocado_crop_complete",
+							"replace_block": "exdrill:avocado_crop"
+						}
+					]
+				},
+				"minecraft:behavior.equip_item": {
+					"priority": 1
+				},
+				"minecraft:equip_item": {},
+				"minecraft:behavior.move_to_block": {
+					"priority": 1,
+					"goal_radius": 0,
+					"speed_multiplier": 0.5,
+					"tick_interval": 1,
+					"target_selection_method": "random",
+					"search_range": 5,
+					"search_height": 3,
+					"stay_duration": 3,
+					"target_blocks": [
+						"exdrill:wheat_crop_complete",
+						"exdrill:potatoes_crop_complete",
+						"exdrill:carrots_crop_complete",
+						"exdrill:tomato_crop_complete",
+						"exdrill:avocado_crop_complete",
+						"exdrill:beetroots_crop_complete"
+					]
+				},
+				"minecraft:behavior.random_stroll": {
+					"priority": 4,
+					"interval": 0.5,
+					"xz_dist": 5,
+					"y_dist": 3,
+					"speed_multiplier": 0.55
+				}
+			},
+			"can_sleep": {
+				"minecraft:behavior.move_to_block": {
+					"priority": 0,
+					"speed_multiplier": 1.3,
+					"goal_radius": 0,
+					"search_height": 5,
+					"search_range": 20,
+					"target_selection_method": "random",
+					"tick_interval": 1,
+					"on_reach": {
+						"event": "sleeping",
+						"target": "self" 
+					},
+					"stay_duration": 0,
+					"target_blocks": [
+						"minecraft:carpet"
+					]
+				}
+			},
+			"awake": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"sleeping": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:environment_sensor": {
+					"triggers": {
+						"event": "wake_up",
+						"filters": {
+							"test": "in_block",
+							"subject": "self",
+							"operator": "not",
+							"value": "minecraft:carpet"
+						}
 					}
 				}
 			},
-			"tamed": {
-				"minecraft:is_tamed": {},
-				"minecraft:behavior.follow_owner": {
-					"priority": 2,
-					"start_distance": 8,
-					"stop_distance": 6
-				},
-				"minecraft:sittable": {},
-				"minecraft:behavior.stay_while_sitting": {
-					"priority": 0
-				},
-				"minecraft:healable": {
-					"items": [
+			"harvest_wheat": {
+				"minecraft:spawn_entity": {
+					"entities": [
 						{
-							"item": "beetroot",
-							"heal_amount": 3
+							"spawn_item": "minecraft:wheat",
+							"min_wait_time": 0,
+							"max_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true
+						}
+					]
+				}
+			},
+			"harvest_carrots": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"spawn_item": "minecraft:carrot",
+							"min_wait_time": 0,
+							"max_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true
+						}
+					]
+				}
+			},
+			"harvest_potatoes": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"spawn_item": "minecraft:potato",
+							"min_wait_time": 0,
+							"max_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true
+						}
+					]
+				}
+			},
+			"harvest_beetroots": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"spawn_item": "minecraft:beetroot",
+							"min_wait_time": 0,
+							"max_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true
+						}
+					]
+				}
+			},
+			"harvest_tomato": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"spawn_item": "exdrill:tomato",
+							"min_wait_time": 0,
+							"max_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true
+						}
+					]
+				}
+			},
+			"harvest_avocado": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"spawn_item": "exdrill:avocado",
+							"min_wait_time": 0,
+							"max_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true
 						}
 					]
 				}
@@ -44,9 +275,6 @@
 			"minecraft:health": {
 				"value": 20,
 				"max": 20
-			},
-			"minecraft:loot": {
-				"table": "loot_tables/entities/beetroot_buddy.json"
 			},
 			"minecraft:movement": {
 				"value": 0.2
@@ -65,46 +293,223 @@
 					"beetroot_buddy"
 				]
 			},
-			"minecraft:inventory": {
-				"inventory_size": 27,
-				"private": false,
-				"can_be_siphoned_from": true
-			},
 			"minecraft:collision_box": {
-				"height": 0.4,
+				"height": 0.6,
 				"width": 0.4
-			},
-			"minecraft:follow_range": {
-				"value": 128
 			},
 			"minecraft:pushable": {},
 			"minecraft:movement.basic": {},
 			"minecraft:navigation.walk": {
 				"can_walk": true
 			},
-			"minecraft:jump.static": {},
-			"minecraft:can_climb": {},
-			"minecraft:behavior.float": {}
+			"minecraft:jump.static": {
+				"jump_power": 0.4
+			},
+			"minecraft:equipment": {
+				"slot_drop_chance": [
+					{
+						"drop_chance": 1,
+						"slot": "slot.weapon.mainhand"
+					}
+				]
+			},
+			"minecraft:scheduler": {
+				"scheduled_events": [
+					{
+						"event": "daytime_behavior",
+						"filters": {
+							"test": "is_daytime",
+							"subject": "self",
+							"value": true
+						}
+					},
+					{
+						"event": "nighttime_behavior",
+						"filters": {
+							"test": "is_daytime",
+							"subject": "self",
+							"value": false
+						}
+					}
+				]
+			}
 		},
 		"events": {
 			"minecraft:entity_spawned": {
 				"add": {
 					"component_groups": [
-						"wild"
+						"scale"
 					]
 				}
 			},
-			"exdrill:on_tamed": {
+			"wake_up": {
 				"add": {
 					"component_groups": [
-						"tamed"
+						"awake",
+						"can_sleep"
 					]
 				},
 				"remove": {
 					"component_groups": [
-						"wild"
+						"sleeping"
 					]
 				}
+			},
+			"awake": {
+				"add": {
+					"component_groups": [
+						"awake"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sleeping"
+					]
+				}
+			},
+			"sleeping": {
+				"add": {
+					"component_groups": [
+						"sleeping"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"awake",
+						"can_sleep"
+					]
+				}
+			},
+			"daytime_behavior": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"can_harvest",
+								"awake"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"can_sleep",
+								"sleeping"
+							]
+						},
+						"filters": {
+							"test": "is_variant",
+							"subject": "self",
+							"value": 1
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"can_harvest_low",
+								"awake"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"can_sleep",
+								"sleeping"
+							]
+						},
+						"filters": {
+							"test": "is_variant",
+							"subject": "self",
+							"value": 0
+						}
+					}
+				]
+			},
+			"nighttime_behavior": {
+				"add": {
+					"component_groups": [
+						"can_sleep",
+						"awake"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"can_harvest"
+					]
+				}
+			},
+			"on_eat": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"harvest_wheat"
+							]
+						},
+						"filters": {
+							"test": "in_block",
+							"subject": "self",
+							"value": "exdrill:wheat_crop"
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"harvest_carrots"
+							]
+						},
+						"filters": {
+							"test": "in_block",
+							"subject": "self",
+							"value": "exdrill:carrots_crop"
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"harvest_potatoes"
+							]
+						},
+						"filters": {
+							"test": "in_block",
+							"subject": "self",
+							"value": "exdrill:potatoes_crop"
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"harvest_beetroots"
+							]
+						},
+						"filters": {
+							"test": "in_block",
+							"subject": "self",
+							"value": "exdrill:beetroots_crop"
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"harvest_tomato"
+							]
+						},
+						"filters": {
+							"test": "in_block",
+							"subject": "self",
+							"value": "exdrill:tomato_crop"
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"harvest_avocado"
+							]
+						},
+						"filters": {
+							"test": "in_block",
+							"subject": "self",
+							"value": "exdrill:avocado_crop"
+						}
+					}
+				]
 			}
 		}
 	}

@@ -5,70 +5,35 @@
 			"identifier": "exdrill:worm",
 			"is_summonable": true,
 			"is_spawnable": true,
-			"animations": {
-				"digging": "animation.worm_digging"
-			},
-			"scripts": {
-				"animate": [
-					{"digging": "query.variant == 1"}
-				]
-			}
+			"runtime_identifier": "minecraft:sheep"
 		},
-		"component_groups": {
-			"instant_despawn": {
-				"minecraft:instant_despawn": {}
-			},
-			"move_to_block": {
-				"minecraft:timer": {
-					"looping": true,
-					"time": 5,
-					"time_down_event": {
-						"event": "try_to_dig",
-						"target":"self"
-					}
-				},
-				"minecraft:knockback_resistance": {
-					"value": 0
-				},
-				"minecraft:movement.generic": {},
-				"minecraft:navigation.generic": {},
-				"minecraft:variant": {
-					"value": 0
-				},
-				"minecraft:pushable": {},
-				"minecraft:movement": {
-					"value": 0.15
-				}
-			},
-			"digging": {
-				"minecraft:variant": {
-					"value": 1
-				},
-				"minecraft:timer": {
-					"looping": false,
-					"time": 5,
-					"time_down_event": {
-						"event": "stop_digging",
-						"target": "self"
-					}
-				},
-				"minecraft:knockback_resistance": {
-					"value": 1
-				},
-				"minecraft:movement": {
-					"value": 0
-				}
-			}
-		},
+		"component_groups": {},
 		"components": {
 			"minecraft:health": {
-				"value": 10,
-				"max": 10
+				"value": 15,
+				"max": 15
+			},
+			"minecraft:behavior.eat_block": {
+				"priority": 1,
+				"success_chance": 0.02,
+				"time_until_eat": 3,
+				"eat_and_replace_block_pairs": [
+					{
+						"eat_block": "minecraft:dirt",
+						"replace_block": "exdrill:rich_soil"
+					}
+				]
 			},
 			"minecraft:physics": {},
 			"minecraft:breathable": {
 				"total_supply": 20,
 				"suffocate_time": 15
+			},
+			"minecraft:movement.generic": {},
+			"minecraft:navigation.generic": {},
+			"minecraft:pushable": {},
+			"minecraft:movement": {
+				"value": 0.15
 			},
 			"minecraft:interact": {
 				"interactions": {

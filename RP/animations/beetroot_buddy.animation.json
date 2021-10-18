@@ -5,10 +5,13 @@
 			"loop": true,
 			"bones": {
 				"leg0": {
-					"rotation": ["(math.cos(query.modified_distance_moved * 90) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
+					"rotation": ["(math.cos(query.modified_distance_moved * 180) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
 				},
 				"leg1": {
-					"rotation": ["-(math.cos(query.modified_distance_moved * 90) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
+					"rotation": ["-(math.cos(query.modified_distance_moved * 180) * query.modified_move_speed / variable.gliding_speed_value) * 57.3", 0, 0]
+				},
+				"head": {
+					"rotation": [0, 0, "-(math.cos(query.modified_distance_moved * 90) * query.modified_move_speed / variable.gliding_speed_value) * 22.5"]
 				}
 			}
 		},
@@ -99,7 +102,26 @@
 			"loop": "hold_on_last_frame",
 			"bones": {
 				"head": {
-					"position": [ 0, -2, 0 ]
+					"position": [0, -2, 0]
+				}
+			}
+		},
+		"animation.beetroot_buddy.sleeping": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": [1, "1 + math.cos(query.anim_time*90)*0.05", 1]
+				},
+				"head": {
+					"position": [0, -2, 0]
+				},
+				"leg0": {
+					"rotation": [0, 0, 67.5],
+					"position": [-1, -1.5, 0]
+				},
+				"leg1": {
+					"rotation": [0, 0, -67.5],
+					"position": [1, -1.5, 0]
 				}
 			}
 		}

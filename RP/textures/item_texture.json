@@ -55,6 +55,12 @@
 		},
 		"mashed_potatoes": {
 			"textures": "textures/items/mashed_potatoes"
+		},
+		"salmon_dish": {
+			"textures": "textures/items/salmon_dish"
+		},
+		"avocado_bread": {
+			"textures": "textures/items/avocado_bread"
 		}
 	}
 }

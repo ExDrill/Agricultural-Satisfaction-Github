@@ -75,7 +75,7 @@
 						"run_command": {
 							"command": [
 								"particle exdrill:crop_alert",
-								"playsound note.bit @a ~ ~ ~ 0.6"
+								"playsound note.bit @a ~ ~ ~ 0.2"
 							]
 						}
 					}

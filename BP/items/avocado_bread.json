@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:avocado_bread"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "avocado_bread"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.7,
+			"minecraft:food": {
+				"can_always_eat": false,
+				"nutrition": 6,
+				"saturation_modifier": "good"
+			}
+		}
+	}
+}

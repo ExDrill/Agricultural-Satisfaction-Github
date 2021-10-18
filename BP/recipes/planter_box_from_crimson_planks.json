@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "exdrill:planter_box"
+			"identifier": "exdrill:planter_box_from_crimson_planks"
 		},
 		"tags": [
 			"crafting_table"

@@ -8,12 +8,14 @@ item.exdrill:bottled_butterfly=Bottled Butterfly
 item.exdrill:bottled_worm=Bottled Worm
 item.exdrill:suspicious_brew=Suspicious Brew
 item.exdrill:plate=Plate
-item.exdrill:cup=Cup
-item.exdrill:apple_cider=Apple Cider
+item.exdrill:cup=Cup [UNRELEASED]
+item.exdrill:apple_cider=Apple Cider UNRELEASED
 item.exdrill:glow_berry_pie=Glow Berry Pie
 item.exdrill:avocado=Avocado
 item.exdrill:avocado_pit=Avocado Pit
 item.exdrill:mashed_potatoes=Mashed Potatoes
+item.exdrill:salmon_dish=Salmon Dish
+item.exdrill:avocado_bread=Bread with Avocado
 
 ##Blocks
 tile.exdrill:rich_soil.name=Rich Soil

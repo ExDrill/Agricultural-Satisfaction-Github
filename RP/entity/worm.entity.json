@@ -22,7 +22,7 @@
 						"move": "query.modified_move_speed *2"
 					},
 					{
-						"dig": "query.variant == 1"
+						"dig": "query.is_grazing"
 					}
 				]
 			},

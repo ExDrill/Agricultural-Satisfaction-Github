@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "exdrill:salmon_dish"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "salmon_dish"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 2.5,
+			"minecraft:food": {
+				"can_always_eat": false,
+				"nutrition": 10,
+				"saturation_modifier": "good"
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.beetroot_buddy": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"pop_up",
+						"move"
+					],
+					"transitions": [
+						{
+							"sleeping": "query.variant == 1"
+						}
+					]
+				},
+				"sleeping": {
+					"animations": [
+						"sleeping"
+					],
+					"transitions": [
+						{
+							"default": "query.variant == 0"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "zzz",
+							"locator": "zzz"
+						}
+					]
+				}
+			}
+		}
+	}
+}
