@@ -85,8 +85,8 @@
 			"can_harvest_low": {
 				"minecraft:behavior.eat_block": {
 					"priority": 0,
-					"time_until_eat": 1.5,
-					"success_chance": 0.2,
+					"time_until_eat": 3,
+					"success_chance": 0.1,
 					"on_eat": {
 						"event": "on_eat",
 						"target": "self"
