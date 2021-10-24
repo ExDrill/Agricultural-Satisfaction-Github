@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.spit_golem": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"move_arms",
+						"move_legs",
+						"look_at_target"
+					],
+					"transitions": [
+						{
+							"tip_hat": "query.variant == 1"
+						}
+					]
+				},
+				"tip_hat": {
+					"animations": [
+						"tip_hat",
+						"move_legs",
+						"look_at_target"
+					],
+					"transitions": [
+						{
+							"default": "query.variant == 0"
+						}
+					]
+				},
+				"growl": {}
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "exdrill:crow",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:health": {
+				"value": 5,
+				"max": 5
+			},
+			"minecraft:movement": {
+				"value": 0.2
+			},
+			"minecraft:physics": {},
+			"minecraft:breathable": {
+				"total_supply": 20,
+				"suffocate_time": 15
+			},
+			"minecraft:can_fly": true,
+			"minecraft:flying_speed": {
+				"value": 0.2
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:nameable": {},
+			"minecraft:type_family": {
+				"family": [
+					"mob",
+					"crow"
+				]
+			},
+			"minecraft:pushable": {},
+			"minecraft:navigation.hover": {
+				"can_path_over_water": true,
+                "can_sink": false,
+                "can_pass_doors": false,
+                "can_path_from_air": true,
+                "avoid_water": true,
+                "avoid_damage_blocks": true,
+                "avoid_sun": false
+			},
+			"minecraft:movement.hover": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.random_hover": {
+				"priority": 3,
+				"hover_height": [
+					5, 10
+				],
+				"y_dist": 5,
+				"xz_dist": 15,
+				"interval": 0.5,
+				"y_offset": -1,
+				"speed_multiplier": 2
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"exdrill:wheat_crop_complete"
+				]
+			},
+			"minecraft:behavior.look_at_target": {
+				"priority": 0,
+				"probablity": 1,
+				"look_distance": 15,
+				"look_time": [ 5, 10 ]
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 0,
+				"entity_types": {
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "spit_golem"
+					}
+				}
+			},
+			"minecraft:behavior.move_to_block": {
+				"goal_radius": 0,
+				"target_blocks": [
+					"exdrill:wheat_crop_complete"
+				],
+				"priority": 0,
+				"tick_interval": 1,
+				"search_range": 50,
+				"search_height": 15,
+				"speed_multiplier": 2.5,
+				"stay_duration": 10,
+				"target_selection_method": "random"
+			}
+		},
+		"events": {}
+	}
+}

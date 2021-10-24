@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.crow.grounded": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [-22.5, 0, 0],
+					"position": [0, -1.5, 0]
+				},
+				"head": {
+					"rotation": [22.5, 0, 0],
+					"position": [0, -0.5, 0]
+				},
+				"wing1": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.crow.fly": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [ "query.target_x_rotation", "query.target_y_rotation", 0 ]
+				},
+				"body": {
+					"rotation": [ -22.5, 0, 0]
+				},
+				"head": {
+					"rotation": [22.5, 0, 0]
+				},
+				"wing0": {
+					"rotation": [-22.5, 45, "-25 + -math.cos(query.anim_time*1440)*25"],
+					"position": [0, 0, 1]
+				},
+				"wing1": {
+					"rotation": [-22.5, -45, "25 + math.cos(query.anim_time*1440)*25"],
+					"position": [0, 0, 1]
+				},
+				"leg0": {
+					"rotation": ["-22.5 + math.cos(query.anim_time*1440)*5", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["-22.5 + math.cos(query.anim_time*1440)*5", 0, 0]
+				}
+			}
+		}
+	}
+}

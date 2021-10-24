@@ -202,7 +202,7 @@
 				"speed_multiplier": 0.5
 			},
 			"minecraft:flying_speed": {
-				"value": 0.2
+				"value": 0.1
 			},
 			"minecraft:behavior.float": {
 				"priority": 0

@@ -27,10 +27,14 @@ tile.exdrill:blender.name=Blender
 entity.exdrill:butterfly.name=Butterfly
 entity.exdrill:worm.name=Worm
 entity.exdrill:beetroot_buddy.name=Beetroot Buddy
+entity.exdrill:crow.name=Crow
+entity.exdrill:spit_golem.name=Spit Golem
 
 ##Spawn Eggs
 item.spawn_egg.entity.exdrill:butterfly.name=Spawn Butterfly
 item.spawn_egg.entity.exdrill:worm.name=Spawn Worm
 item.spawn_egg.entity.exdrill:beetroot_buddy.name=Spawn Beetroot Buddy
+item.spawn_egg.entity.exdrill:crow.name=Spawn Crow
+item.spawn_egg.entity.exdrill:spit_golem.name=Spawn Spit Golem
 
 ##Misc

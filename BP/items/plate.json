@@ -7,6 +7,17 @@
 		"components": {
 			"minecraft:icon": {
 				"texture": "plate"
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "exdrill:thrown_plate"
+			},
+			"minecraft:cooldown": {
+				"category": "plate",
+				"duration": 1
+			},
+			"minecraft:throwable": {
+				"do_swing_animation": true,
+				"launch_power_scale": 2
 			}
 		}
 	}
