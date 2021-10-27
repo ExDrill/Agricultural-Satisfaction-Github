@@ -59,40 +59,6 @@
 				"interval": 0.5,
 				"y_offset": -1,
 				"speed_multiplier": 2
-			},
-			"minecraft:break_blocks": {
-				"breakable_blocks": [
-					"exdrill:wheat_crop_complete"
-				]
-			},
-			"minecraft:behavior.look_at_target": {
-				"priority": 0,
-				"probablity": 1,
-				"look_distance": 15,
-				"look_time": [ 5, 10 ]
-			},
-			"minecraft:behavior.nearest_attackable_target": {
-				"priority": 0,
-				"entity_types": {
-					"filters": {
-						"test": "is_family",
-						"subject": "other",
-						"value": "spit_golem"
-					}
-				}
-			},
-			"minecraft:behavior.move_to_block": {
-				"goal_radius": 0,
-				"target_blocks": [
-					"exdrill:wheat_crop_complete"
-				],
-				"priority": 0,
-				"tick_interval": 1,
-				"search_range": 50,
-				"search_height": 15,
-				"speed_multiplier": 2.5,
-				"stay_duration": 10,
-				"target_selection_method": "random"
 			}
 		},
 		"events": {}
