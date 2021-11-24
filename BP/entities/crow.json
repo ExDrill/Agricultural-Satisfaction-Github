@@ -13,7 +13,7 @@
 				"max": 5
 			},
 			"minecraft:movement": {
-				"value": 0.2
+				"value": 0.15
 			},
 			"minecraft:physics": {},
 			"minecraft:breathable": {
@@ -22,7 +22,7 @@
 			},
 			"minecraft:can_fly": true,
 			"minecraft:flying_speed": {
-				"value": 0.2
+				"value": 0.15
 			},
 			"minecraft:collision_box": {
 				"height": 0.5,
@@ -48,6 +48,61 @@
 			"minecraft:movement.hover": {},
 			"minecraft:behavior.float": {
 				"priority": 0
+			},
+			"minecraft:equip_item": {},
+			"minecraft:behavior.equip_item": {},
+			"minecraft:behavior.pickup_items": {
+				"priority": 0,
+				"goal_radius": 3,
+				"max_dist": 20,
+				"track_target": true
+			},
+			"minecraft:shareables": {
+				"items": [
+					{
+						"item": "minecraft:wheat"
+					},
+					{
+						"item": "minecraft:carrot"
+					},
+					{
+						"item": "minecraft:potato"
+					},
+					{
+						"item": "minecraft:beetroot"
+					},
+					{
+						"item": "exdrill:tomato"
+					},
+					{
+						"item": "exdrill:avocado"
+					}
+				]
+			},
+			"minecraft:behavior.move_to_block": {
+				"goal_radius": 4,
+				"priority": 0,
+				"search_height": 5,
+				"search_range": 20,
+				"target_blocks": [
+					"exdrill:wheat_crop_complete",
+					"exdrill:tomato_crop_complete",
+					"exdrill:carrots_crop_complete",
+					"exdrill:beetroots_crop_complete",
+					"exdrill:potatoes_crop_complete",
+					"exdrill:avocado_crop_complete"
+				],
+				"target_selection_method": "nearest"
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"exdrill:wheat_crop_complete",
+					"exdrill:tomato_crop_complete",
+					"exdrill:carrots_crop_complete",
+					"exdrill:beetroots_crop_complete",
+					"exdrill:potatoes_crop_complete",
+					"exdrill:avocado_crop_complete"
+				]
 			},
 			"minecraft:behavior.random_hover": {
 				"priority": 3,

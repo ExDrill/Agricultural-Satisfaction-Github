@@ -16,6 +16,7 @@ item.exdrill:avocado_pit=Avocado Pit
 item.exdrill:mashed_potatoes=Mashed Potatoes
 item.exdrill:salmon_dish=Salmon Dish
 item.exdrill:avocado_bread=Bread with Avocado
+item.exdrill:spit_golem_item=Spit Golem
 
 ##Blocks
 tile.exdrill:rich_soil.name=Rich Soil
