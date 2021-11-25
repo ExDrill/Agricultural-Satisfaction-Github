@@ -1,0 +1,20 @@
+{
+	"format_version": "1.11.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "exdrill:crow",
+			"population_control": "animal"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_block_filter": [
+					"minecraft:grass"
+				],
+				"minecraft:spawns_on_surface": {},
+				"minecraft:weight": {
+					"default": 5
+				}
+			}
+		]
+	}
+}

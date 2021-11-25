@@ -4,13 +4,22 @@
 		"description": {
 			"identifier": "exdrill:crow",
 			"is_summonable": true,
-			"is_spawnable": true
+			"is_spawnable": true,
+			"runtime_identifier": "minecraft:parrot"
 		},
 		"component_groups": {},
 		"components": {
 			"minecraft:health": {
 				"value": 5,
 				"max": 5
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
 			},
 			"minecraft:movement": {
 				"value": 0.15
@@ -36,16 +45,11 @@
 				]
 			},
 			"minecraft:pushable": {},
-			"minecraft:navigation.hover": {
-				"can_path_over_water": true,
-                "can_sink": false,
-                "can_pass_doors": false,
-                "can_path_from_air": true,
-                "avoid_water": true,
-                "avoid_damage_blocks": true,
-                "avoid_sun": false
+			"minecraft:movement.fly": {},
+			"minecraft:navigation.fly": {
+				"can_path_over_water": false,
+				"can_path_from_air": false
 			},
-			"minecraft:movement.hover": {},
 			"minecraft:behavior.float": {
 				"priority": 0
 			},
@@ -53,7 +57,7 @@
 			"minecraft:behavior.equip_item": {},
 			"minecraft:behavior.pickup_items": {
 				"priority": 0,
-				"goal_radius": 3,
+				"goal_radius": 1,
 				"max_dist": 20,
 				"track_target": true
 			},
@@ -104,16 +108,14 @@
 					"exdrill:avocado_crop_complete"
 				]
 			},
-			"minecraft:behavior.random_hover": {
-				"priority": 3,
-				"hover_height": [
-					5, 10
-				],
-				"y_dist": 5,
-				"xz_dist": 15,
-				"interval": 0.5,
-				"y_offset": -1,
-				"speed_multiplier": 2
+			"minecraft:behavior.random_fly": {
+				"priority": 1,
+				"can_land_on_trees": true,
+				"avoid_damage_blocks": false,
+				"speed_multiplier": 1.0,
+				"y_dist": 1,
+				"y_offset": 0,
+				"xz_dist": 15
 			}
 		},
 		"events": {}
