@@ -2,6 +2,18 @@
 	"resource_pack_name": "Project Farm",
 	"texture_name": "atlas.items",
 	"texture_data": {
+		"wheat_seeds": {
+			"textures": "textures/items/seeds_wheat"
+		},
+		"carrot": {
+			"textures": "textures/items/carrot"
+		},
+		"potato": {
+			"textures": "textures/items/potato"
+		},
+		"beetroot_seeds": {
+			"textures": "textures/items/seeds_beetroot"
+		},
 		"tomato": {
 			"textures": "textures/items/tomato"
 		},
