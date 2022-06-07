@@ -7,7 +7,7 @@
 				"root": {
 					"rotation": ["math.cos(query.anim_time*360)*-3", 0, 0],
 					"position": [0, 0, "-2 + math.cos(query.anim_time*360)*-2"],
-					"scale": [ 0, 0, "1 + math.cos(query.anim_time*360)*-0.5" ]
+					"scale": [ 0, 0, "1 + math.cos(query.anim_time*360)*-0.25" ]
 				}
 			}
 		},

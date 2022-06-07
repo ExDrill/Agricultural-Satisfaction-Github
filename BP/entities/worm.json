@@ -7,7 +7,11 @@
 			"is_spawnable": true,
 			"runtime_identifier": "minecraft:sheep"
 		},
-		"component_groups": {},
+		"component_groups": {
+			"instant_despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
 		"components": {
 			"minecraft:health": {
 				"value": 15,
@@ -77,27 +81,8 @@
 			"minecraft:behavior.float": {}
 		},
 		"events": {
-			"minecraft:entity_spawned": {
-				"add": {
-					"component_groups": [
-						"move_to_block"
-					]
-				}
-			},
 			"exdrill:spawn": {
 				"sequence": [
-					{
-						"add": {
-							"component_groups": [
-								"move_to_block"
-							]
-						},
-						"filters": {
-							"test": "in_water_or_rain",
-							"subject": "self",
-							"value": true
-						}
-					},
 					{
 						"add": {
 							"component_groups": [
@@ -112,58 +97,6 @@
 						}
 					}
 				]
-			},
-			"try_to_dig": {
-				"randomize": [
-					{
-						"run_command": {
-							"command": [
-								"execute @s ~ ~ ~ detect ~ ~-1 ~ dirt 1 event entity @s start_digging"
-							]
-						},
-						"weight": 74
-					},
-					{
-						"weight": 1
-					}
-				]
-			},
-			"start_digging": {
-				"add": {
-					"component_groups": [
-						"digging"
-					]
-				},
-				"remove": {
-					"component_groups": [
-						"move_to_block"
-					]
-				}
-			},
-			"stop_digging": {
-				"remove": {
-					"component_groups": [
-						"digging"
-					]
-				},
-				"add": {
-					"component_groups": [
-						"move_to_block"
-					]
-				},
-				"run_command": {
-					"command": [
-						"fill ~ ~-1 ~ ~ ~-1 ~ exdrill:rich_soil 0 replace dirt 1"
-					],
-					"target": "self"
-				}
-			},
-			"exdrill:spawn_from_bottle": {
-				"add": {
-					"component_groups": [
-						"move_to_block"
-					]
-				}
 			},
 			"exdrill:instant_despawn": {
 				"add": {

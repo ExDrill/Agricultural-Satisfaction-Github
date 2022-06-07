@@ -42,8 +42,7 @@
 								"playsound armor.equip_generic @s"
 							],
 							"target": "self"
-						},
-						"condition": "!query.has_armor_slot('slot.armor.head')"
+						}
 					}
 				]
 			}

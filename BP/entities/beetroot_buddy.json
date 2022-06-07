@@ -35,16 +35,12 @@
 							"replace_block": "exdrill:carrots_crop"
 						},
 						{
-							"eat_block": "exdrill:tomato_crop_complete",
-							"replace_block": "exdrill:tomato_crop"
+							"eat_block": "exdrill:tomato_vine_complete",
+							"replace_block": "exdrill:tomato_vine"
 						},
 						{
 							"eat_block": "exdrill:beetroots_crop_complete",
 							"replace_block": "exdrill:beetroots_crop"
-						},
-						{
-							"eat_block": "exdrill:tomato_crop_complete",
-							"replace_block": "exdrill:tomato_crop"
 						},
 						{
 							"eat_block": "exdrill:avocado_crop_complete",
@@ -69,7 +65,7 @@
 						"exdrill:wheat_crop_complete",
 						"exdrill:potatoes_crop_complete",
 						"exdrill:carrots_crop_complete",
-						"exdrill:tomato_crop_complete",
+						"exdrill:tomato_vine_complete",
 						"exdrill:avocado_crop_complete",
 						"exdrill:beetroots_crop_complete"
 					]
@@ -105,16 +101,12 @@
 							"replace_block": "exdrill:carrots_crop"
 						},
 						{
-							"eat_block": "exdrill:tomato_crop_complete",
-							"replace_block": "exdrill:tomato_crop"
+							"eat_block": "exdrill:tomato_vine_complete",
+							"replace_block": "exdrill:tomato_vine"
 						},
 						{
 							"eat_block": "exdrill:beetroots_crop_complete",
 							"replace_block": "exdrill:beetroots_crop"
-						},
-						{
-							"eat_block": "exdrill:tomato_crop_complete",
-							"replace_block": "exdrill:tomato_crop"
 						},
 						{
 							"eat_block": "exdrill:avocado_crop_complete",
@@ -139,7 +131,7 @@
 						"exdrill:wheat_crop_complete",
 						"exdrill:potatoes_crop_complete",
 						"exdrill:carrots_crop_complete",
-						"exdrill:tomato_crop_complete",
+						"exdrill:tomato_vine_complete",
 						"exdrill:avocado_crop_complete",
 						"exdrill:beetroots_crop_complete"
 					]
@@ -278,6 +270,13 @@
 			},
 			"minecraft:movement": {
 				"value": 0.2
+			},
+			"minecraft:behavior.open_door": {
+				"close_door_after": true,
+				"priority": 1
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
 			},
 			"minecraft:physics": {},
 			"minecraft:breathable": {
@@ -494,7 +493,7 @@
 						"filters": {
 							"test": "in_block",
 							"subject": "self",
-							"value": "exdrill:tomato_crop"
+							"value": "exdrill:tomato_vine"
 						}
 					},
 					{

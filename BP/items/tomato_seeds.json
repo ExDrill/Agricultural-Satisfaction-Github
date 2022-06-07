@@ -1,5 +1,5 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.19.10",
 	"minecraft:item": {
 		"description": {
 			"identifier": "exdrill:tomato_seeds",
@@ -9,11 +9,28 @@
 			"minecraft:icon": {
 				"texture": "tomato_seeds"
 			},
-			"minecraft:block_placer": {
-				"block": "exdrill:tomato_crop"
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "place",
+					"target": "self",
+					"condition": "query.block_face == 0.0"
+				}
 			},
 			"minecraft:creative_category": {
 				"parent": "itemGroup.name.seed"
+			}
+		},
+		"events": {
+			"place": {
+				"run_command": {
+					"command": [
+						"execute if block ~ ~ ~ exdrill:rich_soil 0 run function tomato_seeds",
+						"execute if block ~ ~ ~ dirt 0 run function tomato_seeds",
+						"execute if block ~ ~ ~ farmland 0 run function tomato_seeds"
+					],
+					"target": "block"
+				},
+				"swing": {}
 			}
 		}
 	}
