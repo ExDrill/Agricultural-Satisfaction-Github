@@ -43,7 +43,8 @@
 			"minecraft:on_player_destroyed": {
 				"event": "destroy",
 				"target": "self"
-			}
+			},
+			"tag:exdrill:fully_grown_crop": {}
 		},
 		"events": {
 			"on_placed": {

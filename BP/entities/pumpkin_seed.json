@@ -7,14 +7,20 @@
 			"is_spawnable": false,
 			"runtime_identifier": "minecraft:arrow"
 		},
-		"component_groups": {},
+		"component_groups": {
+			"scale": {
+				"minecraft:scale": {
+					"value": 0.5
+				}
+			}
+		},
 		"components": {
 			"minecraft:projectile": {
 				"power": 1.6,
 				"gravity": 0.05,
 				"uncertainty_base": 1,
 				"uncertainty_multiplier": 0,
-				"offset": [ 0, 1.8, 0 ],
+				"offset": [ 0, 1.25, 0 ],
 				"on_hit": {
 					"impact_damage": {
 						"destroy_on_hit": true,
@@ -30,6 +36,12 @@
 				"width": 0.25
 			}
 		},
-		"events": {}
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [ "scale" ]
+				}
+			}
+		}
 	}
 }

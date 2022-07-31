@@ -43,7 +43,8 @@
 				"event": "fertilize",
 				"target": "self",
 				"condition": "query.block_property('exdrill:growth') < 3"
-			}
+			},
+			"tag:exdrill:crop": {}
 		},
 		"permutations": [
 			{

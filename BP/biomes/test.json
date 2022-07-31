@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:biome": {
+		"description": {
+			"identifier": "test"
+		},
+		"components": {
+			"minecraft:surface_parameters": {
+				"foundation_material": "dirt",
+				"mid_material": "dirt",
+				"sea_floor_material": "dirt",
+				"top_material": "dirt",
+				"sea_material": "minecraft:water",
+				"sea_floor_depth": 1
+			},
+			"minecraft:overworld_height": {
+				"noise_type": "default"
+			},
+			"minecraft:overworld_generation_rules": {
+				"generate_for_climates": [
+					[
+						"cold",
+						0.1
+					]
+				]
+			}
+		}
+	}
+}

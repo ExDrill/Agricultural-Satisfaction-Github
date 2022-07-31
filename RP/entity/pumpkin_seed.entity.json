@@ -7,13 +7,13 @@
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/pumpkin_seed"
+				"default": "textures/items/seeds_pumpkin"
 			},
 			"geometry": {
-				"default": "geometry.pumpkin_seed"
+				"default": "geometry.item_sprite"
 			},
 			"animations": {
-				"move": "animation.pumpkin_seed.move"
+				"move": "animation.actor.billboard"
 			},
 			"scripts": {
 				"animate": [
@@ -21,7 +21,7 @@
 				]
 			},
 			"render_controllers": [
-				"controller.render.default"
+				"controller.render.item_sprite"
 			]
 		}
 	}
